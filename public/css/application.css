@@ -41,19 +41,20 @@ html {
     font-size: 1em;
     line-height: 1.4;
     /*background: url(../img/Gibbon_6.jpg) no-repeat center center fixed, rgba(54,54,54,0.7); */
-    background: url(../img/b.jpg) no-repeat center center fixed, rgba(54,54,54,0.7); 
+    /*background: url(../img/b.jpg) no-repeat center center fixed, rgba(54,54,54,0.7); */
     /*background: url(../img/c.png) no-repeat center center fixed, rgba(54,54,54,0.7); */
-    -webkit-background-size: cover;
+    
+    /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+   background-size: cover;*/
 }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
- */
+ 
 
 ::-moz-selection {
     background: #b3d4fc;
