@@ -1,0 +1,11 @@
+<section class="user">
+  <a href="/create_survey">Create a Survey</a>
+  <% if @surveys %>
+  <ul> 
+    <% @surveys.each do |survey|%>
+    <li><h2>Your Surveys</h2></li>
+    <li><h5><%=survey.name%></h5></li>
+    <%end%>
+  </ul>
+  <%end%>
+</section>
