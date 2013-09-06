@@ -1,3 +1,4 @@
 class Participation < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :participant
+  belongs_to :survey
 end

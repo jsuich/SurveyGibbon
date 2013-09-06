@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :surveysD
-
-  validates :password, :length => { :minimum => 1 }
+  has_many :surveys
+  has_many :questions, :through => :surveys
 
   validates :password, :length => { :minimum => 1 }
   validates :email, :uniqueness => true, :format => /.+@.+\..+/ # imperfect, but okay
