@@ -19,7 +19,13 @@
 </head>
 <body>
   <nav>
-    
+    <ul>
+    <li><a href="/">Home</a></li>
+    <% if @user %>
+      <li><a href="/user/<%= @user.id %>">Account</a></li>
+      <li><a href="/logout">Logout</a></li>
+    <% end %>
+  </ul>
   </nav>
   <div class="container">
   <%= yield %>

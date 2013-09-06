@@ -1,5 +1,6 @@
-<section class="user">
-  <a href="/create_survey">Create a Survey</a>
+<section class="user centerwrap">
+  <h3><%= @user.email %></h3>
+  <a href="/user/<%=@user.id%>/create_survey">Create a Survey</a>
   <% if @surveys %>
   <ul> 
     <% @surveys.each do |survey|%>
