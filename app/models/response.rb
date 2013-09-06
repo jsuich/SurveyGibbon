@@ -1,3 +1,3 @@
-class Voter < ActiveRecord::Base
+class Response < ActiveRecord::Base
   # Remember to create a migration!
 end
