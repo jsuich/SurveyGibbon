@@ -1,11 +1,12 @@
 <section class="create_survey centerwrap">
   <h3><%= @user.email %></h3><hr>
-  <form>
-    <label for="question[:text]">Text Question</label>
-    <input type="checkbox" name="question[:text]">
-    <input type="text" name="question[:question]">
+  <form id="survey_form">
+    <div class="survey_title">
+    <input placeholder="Survey Title" type="text" name="survey[:title]"> <input type="submit" class="build_survey" value="Build Survey">
+    </div>
     <hr>
-    <input type="submit" value="Build Survey">
   </form>
-    
+  <a id="new_q" href="#" >Add New Question</a>
+  <div>
+  </div>   
 </section>
