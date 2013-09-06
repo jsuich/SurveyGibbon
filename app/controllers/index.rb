@@ -10,7 +10,22 @@ post '/user' do
   else 
     @user = User.create(params[:user])
   end
-  erb :user
+  
+  redirect("/user/#{@user.id}")
+end
+
+
+get '/user/:id' do
+  @user = User.find_by_id(params[:id])
+
+  erb :user 
+end
+
+
+get '/user/:id/create_survey' do
+  @user = User.find_by_id(params[:id])  
+
+  erb :create_survey
 end
 
 get '/create_survey' do
