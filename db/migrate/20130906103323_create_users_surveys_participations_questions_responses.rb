@@ -21,7 +21,7 @@ class Create_Users_Surveys_Participations_Questions_Responses < ActiveRecord::Mi
     end
 
 	create_table :participations do |t|
-    	t.string :participants_id
+    	t.integer :participants_id
     	t.integer :survey_id
     	t.timestamps
     end
