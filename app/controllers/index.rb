@@ -27,3 +27,6 @@ get '/user/:id/create_survey' do
 
   erb :create_survey
 end
+
+get '/create_survey' do
+end

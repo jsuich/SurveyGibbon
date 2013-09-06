@@ -1,7 +1,62 @@
 IMAGE: 
-http://minus.com/lnTHmz7GdeuI9
+http://minus.com/li442ivFlETaL
 
 EXCEL TABLES:
+Users     
+ID  email pw  
+1 mark@mark.com 1234  
+2 joe@joe.com 3333  
+3 bob@bob.com 4444  
+      
+Surveys     
+ID  title user_id (creator) 
+1 Politics  1 
+2 Miscellaneous 1 
+      
+Participations      
+ID  user_id (voter) survey_id 
+1 1 1 
+2 1 2 
+3 2 1 
+4 2 2 
+5 3 1 
+6 3 2 
+      
+Questions     
+ID  question  survey_id 
+1 Who do you want for president?  1 
+2 Who do you want for senate? 1 
+3 Do you like baseball? 2 
+4 Do you like cheerios? 2 
+      
+Options     
+ID  option    
+1 Hillary   
+2 Palin   
+3 Obama   
+4 Feinstein   
+5 Boxer   
+6 Kerry   
+8 yes   
+9 no    
+10  maybe   
+14  no opinion     
+      
+Options_Questsions      
+ID  question_id option_id 
+1 3 8 
+2 3 9 
+3 3 10  
+4 4 8 
+5 4 9 
+6 4 10  
+      
+Responses     
+ID  participation_id  question_id option_id
+1 1 1 3
+2 1 2 2
+3 1 3 3
+4 1 4 1
 
 
 
@@ -85,26 +140,7 @@ XML FOR SCHEMA DESIGNER:
 <part>id</part>
 </key>
 </table>
-<table x="525" y="331" name="responses">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_participations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="participations" row="id" />
-</row>
-<row name="id_questions" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_options" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="options" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="179" y="233" name="participations">
+<table x="282" y="273" name="participations">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -120,21 +156,44 @@ XML FOR SCHEMA DESIGNER:
 <part>id</part>
 </key>
 </table>
-<table x="803" y="347" name="options">
+<table x="1001" y="337" name="options">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="text" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
+<row name="type" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="852" y="185" name="questions_options">
+<table x="825" y="212" name="options_questions">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="id_questions" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="questions" row="id" />
+</row>
+<row name="id_options" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="options" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="588" y="336" name="responses">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_participations" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="participations" row="id" />
+</row>
 <row name="id_questions" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="questions" row="id" />
