@@ -2,7 +2,37 @@ IMAGE:
 http://minus.com/lYaqBZRJ6mv9b
 
 EXCEL TABLES:
-
+Users     
+ID  email pw  
+1 mark@mark.com 1234  
+2 joe@joe.com 3333  
+3 bob@bob.com 4444  
+      
+Surveys     
+ID  title user_id (creator) 
+1 Politics  1 
+2 Miscellaneous 1 
+      
+Participations      
+ID  user_id (voter) survey_id 
+1 1 1 
+2 1 2 
+3 2 1 
+4 2 2 
+5 3 1 
+6 3 2 
+      
+Questions     
+ID  question  survey_id 
+1 Who do you want for president?  1 
+2 Who do you want for senate? 1 
+3 Do you like baseball? 2 
+4 Do you like cheerios? 2 
+      
+Responses     
+ID  participation_id  question_id answer
+1 1 1 GREAT!
+2 1 4 OK
 
 
 XML FOR SCHEMA DESIGNER:
@@ -85,7 +115,7 @@ XML FOR SCHEMA DESIGNER:
 <part>id</part>
 </key>
 </table>
-<table x="607" y="279" name="responses">
+<table x="584" y="281" name="responses">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>

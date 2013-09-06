@@ -10,4 +10,8 @@ post '/user' do
   else 
     @user = User.create(params[:user])
   end
+  erb :user
+end
+
+get '/create_survey' do
 end

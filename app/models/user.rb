@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
-  has_many :surveys
+  has_many :surveysD
 
-  
-  validates :entered_password, :length => { :minimum => 6 }
+  validates :password, :length => { :minimum => 1 }
+
+  validates :password, :length => { :minimum => 1 }
   validates :email, :uniqueness => true, :format => /.+@.+\..+/ # imperfect, but okay
 
   include BCrypt
@@ -12,7 +13,7 @@ class User < ActiveRecord::Base
   end
 
   def password=(pass)
-    @entered_password = pass
+    @password = pass
     @password = Password.create(pass)
     self.password_hash = @password
   end
