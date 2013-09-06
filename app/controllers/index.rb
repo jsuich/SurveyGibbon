@@ -12,3 +12,6 @@ post '/user' do
   end
   erb :user
 end
+
+get '/create_survey' do
+end
