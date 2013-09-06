@@ -1,5 +1,5 @@
 IMAGE: 
-http://minus.com/lYaqBZRJ6mv9b
+http://minus.com/lnTHmz7GdeuI9
 
 EXCEL TABLES:
 
@@ -70,7 +70,7 @@ XML FOR SCHEMA DESIGNER:
 <part>id</part>
 </key>
 </table>
-<table x="609" y="112" name="questions">
+<table x="612" y="112" name="questions">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -78,14 +78,14 @@ XML FOR SCHEMA DESIGNER:
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="surveys" row="id" />
 </row>
-<row name="question" null="1" autoincrement="0">
+<row name="text" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="607" y="279" name="responses">
+<table x="525" y="331" name="responses">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -95,11 +95,11 @@ XML FOR SCHEMA DESIGNER:
 </row>
 <row name="id_questions" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="questions" row="id" />
-</row>
-<row name="answer" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
+<row name="id_options" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="options" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
@@ -115,6 +115,33 @@ XML FOR SCHEMA DESIGNER:
 <row name="id_users" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="803" y="347" name="options">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="text" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="852" y="185" name="questions_options">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_questions" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="questions" row="id" />
+</row>
+<row name="id_options" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="options" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
