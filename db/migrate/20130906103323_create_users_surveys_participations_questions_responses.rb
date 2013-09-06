@@ -7,4 +7,5 @@ class Create_Users_Surveys_Participations_Questions_Responses < ActiveRecord::Mi
       	t.timestamps
     end
   end
+  
 end
