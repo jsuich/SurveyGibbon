@@ -182,7 +182,20 @@ body{
    background-size: cover;
    z-index:-2;
 }
-
+.cover3{
+  position: fixed;
+  top:0; left:0;
+  height: 100%;
+  width:100%;
+  opacity:0.9; 
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+}
 div.stop_scroll{
   height: 100px;
   margin-top: 100px;
@@ -209,27 +222,21 @@ nav > ul > li{
   margin:0 40px 0px;
 }
 h2.logo{
-  float: left;
-  margin: 10px 20px 0; padding: 0;
+  position: absolute;
+  top:10px; left:130px;
+  margin:0; padding: 0;
 }
 img.logoimg{
-  float: left;
+  position: absolute;
   width:100px;
-  height:auto;
-  margin: 10px;
+  top:10px;
+  left:10px;
   border:1px solid white;
 }
 div.container{
   width: 100%;
-  height: 150%;
-  margin: 0;
-  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+  height: 100%;
+  margin: 0; padding: 0;
 }
 
 .centerwrap{
@@ -243,18 +250,8 @@ section.home{
   height: 550px;
   margin: 0 auto;
   padding-top: 90px;
-  /*background: rgba(5,150,85,0.7);*/
-  /*z-index:2;*/
 }
-.cover3{
-  position: absolute;
-  top:70px; left:0;
-  height: 640px;
-  width:100%;
-  /*background: url(../img/sos.png) repeat;*/
-  opacity:0.9;
-  z-index:-1; 
-}
+
 
 section.home > form {
   width:1215px;
