@@ -1,0 +1,27 @@
+<section class="results_page centerwrap">
+  <table>
+    <thead class="result_head">
+      <h4>Survey for: <%=@survey.title.capitalize%></h4>
+    </thead>
+  <tr>  
+    <th><%=@survey.title.capitalize%></th>
+    <%@q.each do |q| %>
+      <th><h5><%= q.prompt %></h5></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @tot.each do |tot|%>
+      <td>
+        <h5><%=tot[0].first.name.capitalize%><h5> 
+      </td>    
+    <%tot[1].each do |individual|%>
+      <td>
+        <p><%=individual.response%></p>
+      </td>
+    <%end%>
+    </tr>
+    <%end%>
+  </table>
+
+
+</section>

@@ -1,0 +1,20 @@
+<section class="complete_survey centerwrap">
+<h3><%=@survey['title']%></h3><hr>
+<form action="/user/<%=@user.id%>/survey/<%=@survey.id%>" method="POST">
+<input type="text" name="answers[participant_name]" placeholder="Enter Your Name">
+<input type="text" name="answers[participant_age]" placeholder="Enter Your Age">
+<label for="answers[participant_gender]">Female</label>
+<input type="radio" name="answers[participant_gender]" value="Female">
+<label for="answers[participant_gender]">Male</label>
+<input type="radio" name="answers[participant_gender]" value="Male">
+<hr>
+<% n = 1 %>
+<%@new_arr.each do |question_val|%>
+<input type="hidden" name="answers[question_id][<%=n%>]" value="<%=question_val.id%>">
+<label for="answer"><%= question_val['prompt'] %></label>
+<input type="text" name="answers[response][<%=n%>]" placeholder="Answer Here"><hr>
+<% n += 1 %>
+<%end%>
+<input type="submit" value="Submit Answers">
+</form>
+</section>

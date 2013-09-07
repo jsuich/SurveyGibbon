@@ -1,15 +1,15 @@
 class CreateTables < ActiveRecord::Migration
   def change
   	create_table :users do |t|
-      	t.string :email
-      	t.string :password_hash
-
+        t.string :email
+        t.string :password_hash
       	t.timestamps
     end
 
     create_table :surveys do |t|
     	t.integer :user_id
-    	t.string :title
+    	t.string :url
+        t.string :title
     	t.timestamps
     end
 

@@ -1,4 +1,8 @@
+<div class="cover3"></div>
 <section class="home">
+<%if @user%>
+<%= erb :_user_page %>
+<%else%>
 <form action="/user" method="POST">
   <input name="user[email]" type="email" placeholder="email@email.com">
   <input name="user[password]" type="password" placeholder="password">
@@ -6,4 +10,5 @@
   <input class="signup" type="submit" value="create">
 </form>
 </section> 
+<%end%>
 
