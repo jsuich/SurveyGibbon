@@ -37,23 +37,23 @@ textarea {
     font-family: "arimo_b";
     src: url(../fonts/Arimo-Bold.ttf) format("truetype");
 }
+@font-face{
+    font-family: "20db";
+    src: url(../fonts/20db.otf) format("truetype");
+}
+@font-face{
+    font-family: "goblin";
+    src: url(../fonts/GoblinOne.otf) format("truetype");
+}
+@font-face{
+    font-family: "pol";
+    src: url(../fonts/Polsku.ttf) format("truetype");
+}
 html {
     font-size: 1em;
     line-height: 1.4;
-    /*background: url(../img/Gibbon_6.jpg) no-repeat center center fixed, rgba(54,54,54,0.7); */
-    /*background: url(../img/b.jpg) no-repeat center center fixed, rgba(54,54,54,0.7); */
-    /*background: url(../img/c.png) no-repeat center center fixed, rgba(54,54,54,0.7); */
-    
-    /*-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-   background-size: cover;*/
 }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
  
 
 ::-moz-selection {
@@ -65,7 +65,10 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
-
+ul{
+  padding: 0;
+  margin: 0;
+}
 /*
  * A better looking default horizontal rule
  */
@@ -75,8 +78,8 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    margin: 0 0 1em 0;
+    padding: 1em 0 0;
 }
 
 /*
@@ -100,7 +103,32 @@ fieldset {
     margin: 0;
     padding: 0;
 }
-
+.text-glow{
+    font-size:2em;
+    color: #FFFFFF;
+}
+ 
+.text-glow:hover,
+.text-glow:focus,
+.text-glow:active{
+    -webkit-stroke-width: 4.3px;
+    -webkit-stroke-color: rgba(250,250,255,0.8);
+    -webkit-fill-color: rgba(5,150,85,0.8);;
+    text-shadow: 1px 0px 15px rgba(5,150,85,0.8);
+    -webkit-transition: width 0.3s; /*Safari & Chrome*/
+    transition: width 0.3s;
+    -moz-transition: width 0.3s; /* Firefox 4 */
+    -o-transition: width 0.3s; /* Opera */  
+}
+ /*a,*/
+.text-glow a{   
+    -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+    -o-transition: all 0.3s ease-in; /* Opera */
+    text-decoration:none;
+    color:rgba(250,250,255,0.8);
+}
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -128,47 +156,80 @@ body{
   position: absolute;
   top:0;
   height: 100%;
+  width: 100%; 
+  text-align: center;
+}
+.cover{
+  position: fixed;
+  top:0; left:0;
+  height: 100%;
+  width:100%;
+  background: url(../img/weave.png) repeat;
+  opacity:0.5;
+  z-index:-1; 
+}
+
+.cover2{
+  position: fixed;
+  top:0; left:0;
+  height: 100%;
+  width:100%;
+  opacity:0.6; 
+  background: url(../img/c.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+   z-index:-2;
+}
+
+div.stop_scroll{
+  height: 100px;
+  margin-top: 100px;
+}
+footer,
+nav{
+  width:100%;
+  height:70px;
+  margin: 0; padding: 0;
+  background:rgba(21,21,21,0.9);
+}
+footer{
+  position: fixed;
+  bottom:0;
+}
+nav > ul{
+  width:auto;
+  float: right;
+  padding: 0px; margin: 25px 0 0;
+}
+nav > ul > li{
+  width:100px;
+  display:inline;
+  margin:0 40px 0px;
+}
+h2.logo{
+  float: left;
+  margin: 10px 20px 0; padding: 0;
+}
+img.logoimg{
+  float: left;
+  width:100px;
+  height:auto;
+  margin: 10px;
+  border:1px solid white;
+}
+div.container{
   width: 100%;
+  height: 150%;
+  margin: 0;
   background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
   background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
   background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 12+ */
   background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
   background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-footer,
-nav{
-  width:100%;
-  height:60px;
-  margin: 0; padding: 0;
-  background:rgba(21,21,21,0.7);
-}
-footer{
-  position: fixed;
-  bottom:0;
-  /*background: rgba(254,254,254,0.6);*/
-  /*background: rgba(215,40,40,0.1);*/
-  /*border-top: rgba(215,40,40,0.9) solid 2px;*/
-}
-nav > ul{
-  width:auto;
-  margin: 0 auto;
-}
-nav > ul > li{
-  position: relative;
-  width:100px;
-  display:inline-block;
-  margin:0;
-}
-nav > ul > li.logo{}
-
-nav > ul > li > a{
-  text-decoration: none;
-  color:white;
-}
-div.container{
-  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
 }
 
 .centerwrap{
@@ -177,16 +238,28 @@ div.container{
 }
 
 section.home{
-  width:1400px;
-  height: auto;
-  margin: 25% auto;
-  /*border:solid 1px blue;*/
+  text-align: center;
+  width:100%;
+  height: 550px;
+  margin: 0 auto;
+  padding-top: 90px;
+  /*background: rgba(5,150,85,0.7);*/
+  /*z-index:2;*/
+}
+.cover3{
+  position: absolute;
+  top:70px; left:0;
+  height: 640px;
+  width:100%;
+  /*background: url(../img/sos.png) repeat;*/
+  opacity:0.9;
+  z-index:-1; 
 }
 
-
 section.home > form {
-  display: inline;
-  margin:0 50px;
+  width:1215px;
+  margin:100px auto 0;
+  padding: 0;
 }
 
 section.home > form > input{
@@ -197,54 +270,278 @@ section.home > form > input{
   margin: 5px 0;
   width:600px;
   height: 80px;
+      -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+    -o-transition: all 0.3s ease-in; /* Opera */
 }
-
+section.complete_survey > ul > a > li > h5:hover,
+section.user > ul > a > li > h5:hover,
 section.home > form > input:hover{
-  background: rgba(5,150,5,0.9);
+  background: rgba(5,150,85,0.8);
   border:2px solid white;
 }
 
 section.home > form > input.login,
 section.home > form > input.signup{
   color:white;
-  margin: 0 120px;
+  margin: 0 40px;
   background: rgba(21,21,21,0.5);
   border:2px solid white;
   width: 200px; height: 40px;
   position: relative;
   top:70px;
-  left: 200px;
+  left: 0px;
 }
 
+a:hover,
+a:focus,
+a:active,
+a:hover,
+nav > ul > li > a:hover,
+section.home a:hover,
+nav > ul > li > a:focus,
+section.home a:focus,
+nav > ul > li > a:active,
+section.home a:active{
+
+    -webkit-stroke-width: 4.3px;
+    -webkit-stroke-color: rgba(250,250,255,0.8);
+    -webkit-fill-color: rgba(5,150,85,0.8);
+    text-shadow: 1px 0px 15px rgba(5,150,85,0.8);
+    -webkit-transition: width 0.3s; /*Safari & Chrome*/
+    transition: width 0.3s;
+    -moz-transition: width 0.3s; /* Firefox 4 */
+    -o-transition: width 0.3s; /* Opera */
+     
+}
+
+
+a,
+nav > ul > li > a,
+section.home a{   
+    -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+    -o-transition: all 0.3s ease-in; /* Opera */
+    text-decoration:none;
+}
+nav > ul > li > a{
+ color:rgba(250,250,255,0.8);
+}
+
+a,
+section.home a{
+ color:rgba(35,35,35,0.8); 
+}
+section.individual_results{
+  background:rgba(35,35,35,0.8);
+  color:rgba(235,235,235,0.8);
+  height:auto;
+  padding:50px;
+}
+section.individual_results > div > h2{
+  display: inline-block;
+  margin: 0px 20px 0; 
+}
+section.individual_results > div > h3:first-child{
+  float:left;
+}
+section.individual_results > div > h3:last-child{
+  float:right;
+}
+section.individual_results > div > h2:nth-child(2){
+  color:rgba(5,150,85,0.8);
+}
+section.individual_results > div{
+  padding-bottom: 20px;
+}
+section.individual_results > ul{
+  width: 800px;
+}
+section.individual_results > ul  > li{
+  margin:0px 0 20px; padding: 0;
+}
+section.individual_results > ul  > li.other{ 
+  list-style: none;
+  margin:0; padding: 0;
+  float: right;
+  width: 350px;
+  background: rgba(5,150,85,0.7);
+  border: 2px white solid;
+
+}
+section.individual_results > ul  > li.white{
+  background: rgba(221,221,221,1);
+  border: 1px solid rgba(5,130,5,0.5);
+  text-align: center;
+  float: left;
+  width: 350px;
+  color: rgba(21,21,21,0.7);
+}
+section.complete_survey > form > div.survey_q  > label{
+  float: left;
+}
+section.complete_survey > form > div.survey_q  > textarea{
+  float: right;
+}
+section.complete_survey > form > label,
+section.complete_survey > form > div.survey_q > label,
+section.complete_survey > h3,
+section.user > ul > li > h3,
+section.user > ul > li > h2 > a{
+ color:rgba(250,250,255,0.8); 
+}
+
+section.complete_survey > form > input:first-child{
+  float:left;
+}
+
+section.complete_survey > form > input.goright,
+section.complete_survey > form > input:last-child{
+  float:right;
+}
+section.complete_survey > form > input[type="radio"]{
+  margin:12px 20px;
+}
+section.complete_survey > form > div.survey_q > label{
+  background:rgba(5,150,85,0.6);
+  padding: 10px 20px; 
+  border: 2px white solid;
+  width:40%;
+  color: rgba(54,54,54,0.9);
+}
+section.complete_survey{
+  position: relative;
+  top:100px;
+  width:800px;
+}
+section.complete_survey,
+section.user > ul,
+section.home > div.user_partial,   
+section.user > div.user_partial {
+  background: rgba(34,34,34,0.8);
+  padding: 50px;
+}
+
+section.user > div.user_partial > table,
+section.home > div.centerwrap > table,
+section.results_page > table {
+  width:800px;
+}
+hr.two{
+  margin-top: 25px;
+}
+section.user > h2{
+  color: rgba(245,245,245,0.9);
+}
+
+section.user > ul > li > h2:first-child{
+  float: left;
+}
+section.user > ul > li > h2:last-child{
+  float: right;
+}
+section.user > ul > li > h2,
+section.user > div.centerwrap > h2,
+section.home > div.centerwrap > h2{
+  color: rgba(5,150,85,0.6);
+  margin: 0 0 40px;
+}
+section.user > div.user_partial > table th:first-child,
+section.results_page > table th:first-child{
+  background: rgba(5,150,85,0.8);
+}
+
+section.user > div.user_partial > table th,
+section.home > div.centerwrap > table th{
+  border: 1px solid #ccc;
+  padding: 20px;
+  color: rgba(21,21,21,0.8);
+  background: rgba(5,150,85,0.8);
+}
+section.user > ul > a > li > h5{
+  background: rgba(221,221,221,0.8);
+  padding:20px 40px;
+  border:2px solid white;
+      -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+    transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+    -o-transition: all 0.3s ease-in; /* Opera */
+}
+
+section.user > div.user_partial > table td,
+section.home > div.centerwrap > table td{
+  width:200px;
+  background: rgba(221,221,221,1);
+}
+
+section.user > ul > li{
+  list-style: none;
+}
 
 section.home > form > input.login:hover,
 section.home > form > input.signup:hover{
  background: rgba(21,21,21,0.7); 
  border: 2px solid rgba(5,150,5,0.9); 
 }
+section.home2{
+  display: block;
+  width: 100%;
+  position: relative;
+  top:200px;
+}
+
+section.home2 > h1.styles{
+  font-family: 'Polsku', sans-serif;
+  font-size: 104px;
+  letter-spacing: 10px;
+  color: rgba(21,21,21,1);
+    text-shadow: 0 0 2px rgba(5,150,85,0.8), 0 0 2px rgba(5,150,85,0.8), 0 0 2px rgba(5,150,85,0.8), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1);
+}
+
+section.complete_survey > form > h3,
 section.create_survey .survey_title{
   background: rgba(21,21,21,0.7);
   color: white;
   padding: 10px;
 }
+section.complete_survey > form > div.survey_q > textarea,
+section.complete_survey > form > input,
 section.create_survey input{
-  border:none;
+  border: 2px white solid;
+}
+section.complete_survey > h3{
+  text-align: left;
+  margin: 0 0 40px 0;
+}
+section.complete_survey > form > div.survey_q > textarea{
+  background: rgba(240,240,240,0.9);
+  width:40%;
 }
 section.create_survey .survey_title .build_survey{
   margin-left: 100px;
 }
+
+section.complete_survey > form > input:last-child,
 section.create_survey .survey_title > input:last-child{
   padding: 10px 40px; 
-  background:rgba(5,130,5,0.4);
+  background:rgba(5,130,85,0.8);
   color: rgba(240,240,240,0.9);
   border: 1px solid rgba(240,240,240,0.9);
 
 }
+section.complete_survey > form > div.survey_q > input,
+section.complete_survey > form > input,
 section.create_survey .survey_title > input:first-child{
   background: rgba(221,221,221,1);
   border: 1px solid rgba(5,130,5,0.5);
   padding: 10px; 
   text-align: center;
+}
+section.complete_survey > form > div.survey_q > h1{
+  display: inline;
+  color: white;
 }
 section.create_survey .question_white{
   background:rgba(21,21,21,0.7);
@@ -261,17 +558,36 @@ section.create_survey .question_white > input{
 }
 
 
+section.results_page{
+  margin: 100px auto 0;
+  text-align: center;
+}
 
 
+section.results_page > table th{
+  border: 1px solid #ccc;
+  background: rgba(21,21,21,0.8);
+  color: rgba(221,221,221,0.8);
+}
+
+section.user > div.user_partial > table td,
+section.home > div.centerwrap > table td,
+section.results_page > table td{
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
 
 
-
-
+section.results_page > table tr td:first-child{
+  background: rgba(21,21,21,0.8);
+  color: rgba(221,221,221,0.8);
+}
 
 
 /* ==========================================================================
    Helper classes
-   ========================================================================== */
+   ========================================================================== 
 
 /*
  * Image replacement
