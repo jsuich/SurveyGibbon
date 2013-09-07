@@ -177,16 +177,22 @@ div.container{
 }
 
 section.home{
-  width:1400px;
-  height: auto;
-  margin: 25% auto;
-  /*border:solid 1px blue;*/
+  width:100%;
+  height: 350px;
+  margin: 0 auto;
+  padding-top: 150px;
+  background: rgba(5,150,85,0.8);
+}
+nav ul{
+  padding:20px 0 0 20px;
 }
 
-
 section.home > form {
-  display: inline;
-  margin:0 50px;
+  /*display: inline;*/
+  width:1215px;
+  margin:0px auto 0;
+  /*border:solid 1px green;*/
+  padding: 0;
 }
 
 section.home > form > input{
@@ -213,9 +219,20 @@ section.home > form > input.signup{
   width: 200px; height: 40px;
   position: relative;
   top:70px;
-  left: 200px;
+  left: 150px;
+}
+section.home2{
+  width:1420px;
+  margin-top: 150px;
 }
 
+section.home2 > ul >li {
+  float:left;
+  list-style: none;
+  margin:0 auto;
+  padding: 0 30px;
+  width:27%;
+}
 
 section.home > form > input.login:hover,
 section.home > form > input.signup:hover{
