@@ -21,8 +21,9 @@
   <div class="cover"></div>
   <div class="cover2"></div>
   <div class="cover3"></div>
-  <img class="logoimg" src="/img/surveylogo.jpg"/>
-  <h2 class="logo text-glow"><a href="/">Survey Gibbon</a></h2>
+  <div class="fix">
+  <a href="/"><img class="logoimg" src="/img/surveylogo.jpg"/></a>
+  <a href="/"><h2 class="logo text-glow">Survey Gibbon</h2></a>
   <nav>
     <ul>
     <li><a href="/">Home</a></li>
@@ -32,6 +33,7 @@
     <% end %>
   </ul>
   </nav>
+</div>
   <div class="container">
   <%= yield %>
   </div>
