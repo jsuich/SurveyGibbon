@@ -279,6 +279,7 @@ section.home > form > input{
     -moz-transition: all 0.3s ease-in; /* Firefox 4 */
     -o-transition: all 0.3s ease-in; /* Opera */
 }
+
 section.complete_survey > ul > a > li > h5:hover,
 section.user > ul > a > li > h5:hover,
 section.home > form > input:hover{
