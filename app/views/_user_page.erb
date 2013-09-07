@@ -1,0 +1,18 @@
+<% if @surveys %>
+  <div class="user_partial centerwrap"> 
+    <h2>Your Surveys</h2>
+    <hr>
+    <table>
+      <tr>
+        <th>Survey title</th>
+        <th>Number of participants</th>
+      </tr>
+      <% @total.each do |tot|%>
+      <tr>
+        <td><a href="/show_survey/<%=tot[0].id%>/<%=tot[0].url%>/results"><%=tot[0].title.capitalize%></a></td>
+        <td><h2><%=tot[1]%></h2></td>
+      </tr>
+  <%end%>
+    </table>
+  </div>
+<%end%>

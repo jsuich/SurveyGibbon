@@ -8,7 +8,8 @@ class CreateTables < ActiveRecord::Migration
 
     create_table :surveys do |t|
     	t.integer :user_id
-    	t.string :title
+    	t.string :url
+        t.string :title
     	t.timestamps
     end
 

@@ -1,4 +1,8 @@
+<div class="cover3"></div>
 <section class="home">
+<%if @user%>
+<%= erb :_user_page %>
+<%else%>
 <form action="/user" method="POST">
   <input name="user[email]" type="email" placeholder="email@email.com">
   <input name="user[password]" type="password" placeholder="password">
@@ -6,39 +10,5 @@
   <input class="signup" type="submit" value="create">
 </form>
 </section> 
-<section class="home2 centerwrap">
-<ul>
-  <li>
-    <h3>Title One</h3>
-    <p>You care about justice? Look beyond your own pain, Bruce. This city is rotting.
+<%end%>
 
-I think you and your friend have found the last game in town. where it hurts, their wallets. It's bold. You gonna count me in?
-
-Oh, hee-hee, aha. Ha, ooh, hee, ha-ha, ha-ha. And I thought my jokes were bad.
-
-I told you I was immortal. Oh there are many forms of immortality.
-</p>
-  </li>
-  <li>
-    <h3>Title Two</h3>
-    <p>You care about justice? Look beyond your own pain, Bruce. This city is rotting.
-
-I told you I was immortal. Oh there are many forms of immortality.
-
-Dr. Crane isn't here right now. But if you'd like to make an appointment.
-
-You have inspired good. But you spat in the faces of Gotham's criminals. Didn't you think there might be casualties? Things always get worse before they get better.
-
-Search him. Then I will kill you.</p>
-  </li>
-  <li>
-    <h3>Title Three</h3>
-    <p>You care about justice? Look beyond your own pain, Bruce. This city is rotting.
-
-I think you and your friend have found the last game in town. where it hurts, their wallets. It's bold. You gonna count me in?
-
-Oh, hee-hee, aha. Ha, ooh, hee, ha-ha, ha-ha. And I thought my jokes were bad.
-</p>
-  </li>
-</ul>
-</section>

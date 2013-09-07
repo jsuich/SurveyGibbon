@@ -1,6 +1,7 @@
 <section class="create_survey centerwrap">
+  <h1><%= @error if @error %></h1>
   <h3><%= @user.email %></h3><hr>
-  <form action='/user/<%= @user.id%>/build_survey' method="POST" id="survey_form">
+  <form action='/surveys/<%= @url%>' method="POST" id="survey_form">
     <div class="survey_title">
     <input placeholder="Survey Title" type="text" name="survey[title]"> <input type="submit" class="build_survey" value="Build Survey">
     </div>

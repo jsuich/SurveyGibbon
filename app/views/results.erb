@@ -1,9 +1,19 @@
-<section class="test">
-  <%= @participant.name.capitalize%><br>
-  <%= @participant.gender == 0 ? 'Male' : 'Female' %><br>
-  <%= @participant.age%><hr>
-  <% @complete.each do |com|%>
-    <%=com[0].prompt%><br>
-    <%=com[1][1][1]%><br>
-  <%end%>
+<section class="individual_results centerwrap">
+    <hr>
+    <div><h2><%= @participant.name.capitalize%></h2>
+    <h2><%= @participant.gender == 0 ? 'Male' : 'Female' %></h2>
+    <h2><%= @participant.age%></h2></div>
+    <hr>
+    <h3>Question</h3>
+    <h3>Answers</h3>
+    <div class="clearfix"></div>
+    <hr>
+  <ul>
+    <% @complete.each do |com|%>
+      <li class="white"><p><%=com[0].prompt%><p></li>
+      <li class="other"><p><%=com[1][1][1]%></p></li>
+      <div class="clearfix"></div>
+      <hr>
+    <%end%>
+  </ul>
 </section>
