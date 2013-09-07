@@ -5,7 +5,7 @@ $(document).ready(function() {
    var n = 1
    $('#new_q').on('click', function(event){
       event.preventDefault();
-      $('<ul class="question_white"><input class="centerwrap" placeholder="Enter Question" type="text" name="survey[prompts][' + n + ']"' + '/><a href=""<li id="remove">Remove</li></a></ul><hr>').appendTo("form#survey_form");
+      $('<ul class="question_white"><input class="centerwrap" placeholder="Enter Question" type="text" name="survey[prompts][' + n + ']"' + '/></ul><hr>').appendTo("form#survey_form");
       n++
    });
 
