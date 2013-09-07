@@ -1,0 +1,9 @@
+<section class="test">
+  <%= @participant.name.capitalize%><br>
+  <%= @participant.gender == 0 ? 'Male' : 'Female' %><br>
+  <%= @participant.age%><hr>
+  <% @complete.each do |com|%>
+    <%=com[0].prompt%><br>
+    <%=com[1][1][1]%><br>
+  <%end%>
+</section>

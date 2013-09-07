@@ -277,8 +277,14 @@ section.create_survey .question_white > input{
   color: rgba(21,21,21,0.7);
 }
 
-
-
+section.test{
+  width:400px;
+  float:left;
+}
+section.tes2{
+  width:400px;
+  float:right;
+}
 
 
 
