@@ -4,10 +4,7 @@ get '/' do
     @user = User.find_by_id(session[:user_id])
     if Survey.all.length > 0
       @surveys = Survey.where(user_id: session[:user_id])
-      @count = []
-      @surveys.each do |val|
-        @count << val.participations.count
-      end
+      @count = @surveys.map {|val| val.participations.count}
       @total = @surveys.zip(@count)
     end
   end
@@ -20,10 +17,7 @@ get '/user/:id' do
   session[:user_id] = @user.id
   if Survey.all.length > 0
     @surveys = Survey.where(user_id: params[:id])
-    @count = []
-    @surveys.each do |val|
-    @count << val.participations.count
-    end
+    @count = @surveys.map {|val| val.participations.count}
     @total = @surveys.zip(@count)
   end
   erb :user 
@@ -34,9 +28,7 @@ get '/user/:id/create_survey' do
   @user = User.find_by_id(params[:id]) 
   letters =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
   @url  =  (0...10).map{ letters[rand(letters.length)] }.join  
-  if session[:error]
-    @error = session[:error]
-  end
+  @error = session[:error] if session[:error]
   erb :create_survey
 end
 
