@@ -5,10 +5,46 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+ li#draggable,
+ li#draggable_2,
+li#draggable_3{
+  border:1px solid blue;
+  padding:20px;
+  width:200px;
+  /*height:100px;*/
+ }
 
+ ul#sortable{
+  border:1px solid red;
+  min-height:400px;
+  width:400px;
+ }
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+#formoptions {
+  display: block;
+  float: right;
+}
+
+.formoptions {
+  border: 1px solid red;
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+}
+
+ul#formoptions li {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+}
+
+ul#sortable {
+  padding: 10px 0px;
+}
 
 html,
 button,

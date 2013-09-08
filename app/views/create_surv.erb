@@ -1,0 +1,20 @@
+
+<section class="create_survey centerwrap">
+<form action='/surveys/<%= @url%>' method="POST">
+  <ul id="sortable">
+    <li><input placeholder="Survey Title" type="text" name="surveytitle"></li>
+    <li><input type="submit" id="build_survey" value="Build Survey"></li>
+  </ul>
+</form>
+
+<ul>
+  <li class="question_white" id="draggable">
+    <input placeholder="Enter Question" type="text" name="survey[prompts]"></li>
+
+  <li class="question_white" id="draggable_2">
+    <input placeholder="Enter Question Two" type="text" name="survey[prompts]"></li>
+
+  <li class="question_white" id="draggable_3">
+    <input placeholder="Enter Question Three" type="text" name="survey[prompts]"></li>
+</ul>
+</section>

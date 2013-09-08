@@ -1,13 +1,63 @@
 <section class="create_survey centerwrap">
   <h1><%= @error if @error %></h1>
   <h3><%= @user.email %></h3><hr>
-  <form action='/surveys/<%= @url%>' method="POST" id="survey_form">
+  <form action='/surveys/<%= @url%>' method="POST" id="survey_form sortable">
     <div class="survey_title">
-    <input placeholder="Survey Title" type="text" name="survey[title]"> <input type="submit" class="build_survey" value="Build Survey">
+    <input placeholder="Survey Title" type="text" name="survey[title]">
+
+    <ul>
+      <li class="question_white formoption" id="draggable txt-question">
+        <input class="centerwrap" placeholder="Enter Question" type="text" name="survey[prompts][' + n + ']"' + '/>
+        <hr>
+      </li>
+    </ul>
+
+    <ul id="sortable">
+      <li>first test item</li>
+    </ul>
+
+    <input type="submit" class="build_survey" value="Build Survey">
     </div>
     <hr>
   </form>
-  <a id="new_q" href="#" >Add New Question</a>
-  <div>
-  </div>   
+  
 </section>
+
+
+<ul>
+  <li id="draggable" class="ui-state-highlight">Drag me down</li>
+</ul>
+ 
+<ul id="sortable">
+  <li class="ui-state-default">Item 1</li>
+  <li class="ui-state-default">Item 2</li>
+  <li class="ui-state-default">Item 3</li>
+  <li class="ui-state-default">Item 4</li>
+  <li class="ui-state-default">Item 5</li>
+</ul>
+
+<!-- <div id="formoptions">
+
+<ul>
+    
+    <li class="question_white formoption" id="draggable txt-question">
+      <input class="centerwrap" placeholder="Enter Question" type="text" name="survey[prompts][' + n + ']"' + '/>
+      <hr>
+    </li>
+
+    <li class="question_white formoption" id=" mc-question">
+      
+      <input type="radio" name="vehicle" value="Bike">I have a bike<br>
+      <input type="radio" name="vehicle" value="Car">I have a car<br>
+      <input type="radio" name="vehicle" value="Motorcycle">I have a motorcycle<br>
+      <input type="radio" name="vehicle" value="None">I have no vehicle<br>
+      <hr>
+    </li>
+
+    <li class="question_white formoption" id=" bool-question">
+      <input type="radio" name="true" value="True"><br>True
+      <input type="radio" name="false" value="False"><br>False
+      <hr>
+    </li>
+   
+</div> -->

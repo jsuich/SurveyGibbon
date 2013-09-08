@@ -29,6 +29,10 @@ get '/user/:id' do
   erb :user 
 end
 
+get '/create_surv' do
+
+  erb :create_surv
+end
 
 get '/user/:id/create_survey' do
   @user = User.find_by_id(params[:id]) 
