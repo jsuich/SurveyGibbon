@@ -32,6 +32,12 @@ $(document).ready(function() {
         revert: "invalid",
     });
 
+    $("#draggable_2").draggable({
+        stop: function(ui, event) {
+            event.item.append('<a id="gen_radio" href="#">Add Choice</a>');
+        }
+    });
+
     $("ul, li").disableSelection();
 
     // $('li#remove').click.find('ul.question_white').remove();   
