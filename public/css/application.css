@@ -5,46 +5,10 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
- li#draggable,
- li#draggable_2,
-li#draggable_3{
-  border:1px solid blue;
-  padding:20px;
-  width:200px;
-  /*height:100px;*/
- }
-
- ul#sortable{
-  border:1px solid red;
-  min-height:400px;
-  width:400px;
- }
+ 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-#formoptions {
-  display: block;
-  float: right;
-}
-
-.formoptions {
-  border: 1px solid red;
-  width: 300px;
-  padding: 10px;
-  background-color: white;
-  margin: 10px;
-}
-
-ul#formoptions li {
-  border: 1px solid black;
-  padding: 5px;
-  margin: 2px;
-  background-color: white;
-}
-
-ul#sortable {
-  padding: 10px 0px;
-}
 
 html,
 button,
@@ -249,6 +213,7 @@ div.fix{
   top:0;
   width: 100%;
 }
+
 footer{
   position: fixed;
   bottom:0;
@@ -258,16 +223,19 @@ nav > ul{
   float: right;
   padding: 0px; margin: 25px 0 0;
 }
+
 nav > ul > li{
   width:100px;
   display:inline;
   margin:0 40px 0px;
 }
+
 h2.logo{
   position: absolute;
   top:10px; left:130px;
   margin:0; padding: 0;
 }
+
 img.logoimg{
   position: absolute;
   width:100px;
@@ -516,7 +484,9 @@ section.home > div.centerwrap > table td{
   width:200px;
   background: rgba(221,221,221,1);
 }
-
+section.user{
+  width:800px;
+}
 section.user > ul > li{
   list-style: none;
 }
@@ -547,6 +517,7 @@ section.create_survey .survey_title{
   color: white;
   padding: 10px;
 }
+
 section.complete_survey > form > div.survey_q > textarea,
 section.complete_survey > form > input,
 section.create_survey input{
@@ -560,8 +531,22 @@ section.complete_survey > form > div.survey_q > textarea{
   background: rgba(240,240,240,0.9);
   width:40%;
 }
-section.create_survey .survey_title .build_survey{
-  margin-left: 100px;
+section.create_survey > form > ul > li > h3{
+  float: left;
+  color: rgba(240,240,240,0.9);
+  padding: 0px 10px;
+  text-transform: uppercase;
+}
+section.create_survey > form > ul > li > input.survey_title{
+  float: right;
+  width:400px;
+  background: rgba(5,150,85,0.8);
+  padding: 10px 20px;
+}
+
+section.create_survey > form > ul > li > h3,
+section.create_survey > form > ul > li > input.survey_title{
+  display: inline;
 }
 
 section.complete_survey > form > input:last-child,
@@ -570,26 +555,48 @@ section.create_survey .survey_title > input:last-child{
   background:rgba(5,130,85,0.8);
   color: rgba(240,240,240,0.9);
   border: 1px solid rgba(240,240,240,0.9);
-
 }
+
 section.complete_survey > form > div.survey_q > input,
 section.complete_survey > form > input,
-section.create_survey .survey_title > input:first-child{
+section.create_survey  input.build_survey{
   background: rgba(221,221,221,1);
   border: 1px solid rgba(5,130,5,0.5);
   padding: 10px; 
   text-align: center;
+  float: right;
 }
 section.complete_survey > form > div.survey_q > h1{
   display: inline;
   color: white;
 }
-section.create_survey .question_white{
-  background:rgba(21,21,21,0.7);
+ul li.question_white{
+  background: rgba(5,130,5,0.5);
   padding:10px;
+  margin:10px 0 0 10px;
+  width: 200px;
+}
+ul li.question_white > input{
+  background:rgba(21,21,21,0.7);
   border: 1px solid rgba(5,130,5,0.5);
 }
-section.create_survey .question_white > input{
+
+
+section.create_survey li,
+ul.tools li{
+  list-style: none;
+}
+section.create_survey{
+  background:rgba(21,21,21,0.7);
+  width: 800px; 
+  padding: 50px;
+}
+section.create_survey li:first-child,
+section.create_survey li input.build_survey{
+  display: inline;
+  margin:0;
+}
+section.survey_tools li.question_white > input{
   background: rgba(221,221,221,1);
   border: 1px solid rgba(5,130,5,0.5);
   padding: 10px; 

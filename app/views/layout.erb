@@ -24,19 +24,18 @@
   <div class="cover"></div>
   <div class="cover2"></div>
   <div class="cover3"></div>
-  <div class="fix">
   <a href="/"><img class="logoimg" src="/img/survey-gibbon-white-on-black-logo.png"/></a>
   <a href="/"><h2 class="logo text-glow">Survey Gibbon</h2></a>
   <nav>
     <ul>
-    <li><a href="/">Home</a></li>
-    <% if @user %>
-      <li><a href="/user/<%= @user.id %>">Account</a></li>
-      <li><a href="/logout">Logout</a></li>
-    <% end %>
-  </ul>
-  </nav>
-</div>
+      <li><a href="/">Home</a></li>
+        <% if @user %>
+          <li><a href="/user/<%= @user.id %>">Account</a></li>
+          <li><a href="/logout">Logout</a></li>
+        <% end %>
+      </ul>
+    </nav>
+  
   <div class="container">
   <%= yield %>
   </div>

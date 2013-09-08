@@ -29,21 +29,15 @@ get '/user/:id' do
   erb :user 
 end
 
-get '/create_surv' do
-
-  erb :create_surv
-end
-
 get '/user/:id/create_survey' do
-  @user = User.find_by_id(params[:id]) 
+  @user = User.find(params[:id])
   letters =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
-  @url  =  (0...10).map{ letters[rand(letters.length)] }.join  
+  @url  =  (0...10).map{ letters[rand(letters.length)] }.join 
   if session[:error]
     @error = session[:error]
   end
-  erb :create_survey
+  erb :create_surv
 end
-
 
 get '/show_survey/:survey_id/:url' do
   @user = User.find_by_id(session[:user_id])
