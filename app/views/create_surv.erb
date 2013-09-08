@@ -4,7 +4,7 @@
 <form action='/surveys/<%= @url%>' method="POST">
   <ul id="sortable">
     <hr>
-    <li><h3><%= @user.email %></h3><input placeholder="Survey Title" class="survey_title" type="text" name="survey[title]"></li>
+    <li class="donotsortme"><h3><%= @user.email %></h3><input placeholder="Survey Title" class="survey_title" type="text" name="survey[title]"></li>
     <div class="clearfix"></div>
     <hr>
     <li><input type="submit" class="build_survey" value="Build Survey"></li>
@@ -15,15 +15,15 @@
 
 <ul>
   <li class="question_white" id="draggable">
-    <input placeholder="Add Text Answer ?" type="text" name="survey[prompts]">
+    <input class="ad" placeholder="Add Text Answer ?" type="text" name="survey[prompts]">
   </li>
 
-  <li class="question_white radios" id="draggable_2">
-    <input placeholder="Add Multiple Choice ?" type="text" name="survey[prompts]">
- 
+  <li class="question_white" id="draggable_2">
+    <input class="ad1" placeholder="Add Multiple Choice ?" type="text" name="survey[prompts]">
+    <a href="" id="gen_radio">Add Choice</a>
   </li>
 
   <li class="question_white" id="draggable_3">
-    <input placeholder="Add True / False ?" type="text" name="survey[prompts]"></li>
+    <input class="ad" placeholder="Add True / False ?" type="text" name="survey[prompts]"></li>
 </ul>
 
