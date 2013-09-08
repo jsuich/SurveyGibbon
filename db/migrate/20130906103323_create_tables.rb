@@ -36,7 +36,20 @@ class CreateTables < ActiveRecord::Migration
     	t.integer :participation_id
     	t.integer :question_id
     	t.string :response
+        t.integer :option_id
     	t.timestamps
+    end
+
+    create_table :options do |t|
+        t.string :text
+        t.string :type
+        t.timestamps
+    end
+
+    create_table :questionnaires do |t|
+        t.integer :question_id
+        t.integer :option_id
+        t.timestamps
     end
 
   end
