@@ -201,12 +201,14 @@ body{
 footer,
 nav{
   width:100%;
-  height:70px;
   padding: 0;
   background:rgba(21,21,21,0.9);
 }
 nav{
   margin: 0;
+  height:70px;
+  position: fixed;
+  top:0;
 }
 div.fix{
   position: fixed;
@@ -215,6 +217,7 @@ div.fix{
 }
 
 footer{
+  height: 40px;
   position: fixed;
   bottom:0;
 }
@@ -353,10 +356,10 @@ section.individual_results > div > h2{
   display: inline-block;
   margin: 0px 20px 0; 
 }
-section.individual_results > div > h3:first-child{
+section.individual_results h3.golefter{
   float:left;
 }
-section.individual_results > div > h3:last-child{
+section.individual_results h3.gorighter{
   float:right;
 }
 section.individual_results > div > h2:nth-child(2){
@@ -370,6 +373,7 @@ section.individual_results > ul{
 }
 section.individual_results > ul  > li{
   margin:0px 0 20px; padding: 0;
+  list-style: none;
 }
 section.individual_results > ul  > li.other{ 
   list-style: none;
@@ -378,7 +382,6 @@ section.individual_results > ul  > li.other{
   width: 350px;
   background: rgba(5,150,85,0.7);
   border: 2px white solid;
-
 }
 section.individual_results > ul  > li.white{
   background: rgba(221,221,221,1);
@@ -571,46 +574,62 @@ section.complete_survey > form > div.survey_q > h1{
   color: white;
 }
 ul li.question_white{
-  background: rgba(5,130,5,0.5);
-  padding:10px;
+  background: rgba(5,130,85,0.7);
+  border-right:60px rgba(5,130,85,0.7) solid; 
   margin:10px 0 0 10px;
   width: 200px;
+  list-style: none;
+}
+ul#sortable li.question_white > input{
+  /*width: 300px;*/
 }
 ul li.question_white > input{
-  background:rgba(21,21,21,0.7);
+  background:rgba(21,21,21,0.9);
   border: 1px solid rgba(5,130,5,0.5);
+  height: 40px;
+  width:200px;
+  padding: 3px 10px;
+}
+#sortable{
+  min-height: 300px;
 }
 
-
+ul#sortable li.question_white{
+  background: rgba(5,130,85,0.7);
+  list-style: none;
+  margin: 0 0 0 -10px;
+}
+.container > ul {
+  position: fixed;
+  left:0px;
+  top:34%;
+}
 section.create_survey li,
 ul.tools li{
   list-style: none;
 }
 section.create_survey{
   background:rgba(21,21,21,0.7);
+  min-height: 300px;
   width: 800px; 
-  padding: 50px;
+  padding: 50px 50px 150px;
+  position: relative;
 }
 section.create_survey li:first-child,
 section.create_survey li input.build_survey{
   display: inline;
   margin:0;
 }
-section.survey_tools li.question_white > input{
-  background: rgba(221,221,221,1);
-  border: 1px solid rgba(5,130,5,0.5);
-  padding: 10px; 
-  text-align: center;
-  width: 94%;
-  color: rgba(21,21,21,0.7);
+section.create_survey li input.build_survey{
+  position: absolute;
+  bottom:20px;
+  right:50px;
 }
-
 
 section.results_page{
   margin: 100px auto 0;
   text-align: center;
 }
-
 
 section.results_page > table th{
   border: 1px solid #ccc;

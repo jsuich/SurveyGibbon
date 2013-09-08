@@ -1,11 +1,11 @@
 <section class="user centerwrap">
   <ul>
+  <hr>
   <li><h2><%= @user.email.capitalize %></h2> 
   <h2><a href="/user/<%=@user.id%>/create_survey">Create a Survey</a></h2></li>
   <div class="clearfix"></div>
   <hr>
   <% if @surveys %> 
-  <hr>
     <li><h3>Your Survey Links</h3></li>
     <% @surveys.each do |survey|%>
     <a href="/show_survey/<%=survey.id%>/<%=survey.url%>"><li><h5><%=survey.title.capitalize%></h5></li></a>
