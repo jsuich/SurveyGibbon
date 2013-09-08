@@ -5,75 +5,65 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
- 
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
+ html, button, input, select, textarea {
     color: #222;
 }
 @font-face {
-    font-family: "monoton";
+    font-family:"monoton";
     src: url(../fonts/monoton.ttf) format("truetype");
 }
-@font-face{
-      font-family: "arimo";
+@font-face {
+    font-family:"arimo";
     src: url(../fonts/Arimo-Regular.ttf) format("truetype");
 }
-@font-face{
-     font-family: "arimo_i";
+@font-face {
+    font-family:"arimo_i";
     src: url(../fonts/Arimo-Italic.ttf) format("truetype");
 }
-@font-face{
-         font-family: "arimo_bi";
+@font-face {
+    font-family:"arimo_bi";
     src: url(../fonts/Arimo-BoldItalic.ttf) format("truetype");
 }
-@font-face{
-    font-family: "arimo_b";
+@font-face {
+    font-family:"arimo_b";
     src: url(../fonts/Arimo-Bold.ttf) format("truetype");
 }
-@font-face{
-    font-family: "20db";
+@font-face {
+    font-family:"20db";
     src: url(../fonts/20db.otf) format("truetype");
 }
-@font-face{
-    font-family: "goblin";
+@font-face {
+    font-family:"goblin";
     src: url(../fonts/GoblinOne.otf) format("truetype");
 }
-@font-face{
-    font-family: "pol";
+@font-face {
+    font-family:"pol";
     src: url(../fonts/Polsku.ttf) format("truetype");
 }
 html {
     font-size: 1em;
     line-height: 1.4;
 }
-
- 
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-ul{
-  padding: 0;
-  margin: 0;
+ul {
+    padding: 0;
+    margin: 0;
 }
 /*
  * A better looking default horizontal rule
  */
-
-hr {
+ hr {
     display: block;
     height: 1px;
     border: 0;
@@ -81,577 +71,524 @@ hr {
     margin: 0 0 1em 0;
     padding: 1em 0 0;
 }
-
 /*
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
-
-audio,
-canvas,
-img,
-video {
+ audio, canvas, img, video {
     vertical-align: middle;
 }
-
 /*
  * Remove default fieldset styles.
  */
-
-fieldset {
+ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
-.text-glow{
+.text-glow {
     font-size:2em;
     color: #FFFFFF;
 }
- 
-.text-glow:hover,
-.text-glow:focus,
-.text-glow:active{
+.text-glow:hover, .text-glow:focus, .text-glow:active {
     -webkit-stroke-width: 4.3px;
-    -webkit-stroke-color: rgba(250,250,255,0.8);
-    -webkit-fill-color: rgba(5,150,85,0.8);;
-    text-shadow: 1px 0px 15px rgba(5,150,85,0.8);
-    -webkit-transition: width 0.3s; /*Safari & Chrome*/
+    -webkit-stroke-color: rgba(250, 250, 255, 0.8);
+    -webkit-fill-color: rgba(5, 150, 85, 0.8);
+    ;
+    text-shadow: 1px 0px 15px rgba(5, 150, 85, 0.8);
+    -webkit-transition: width 0.3s;
+    /*Safari & Chrome*/
     transition: width 0.3s;
-    -moz-transition: width 0.3s; /* Firefox 4 */
-    -o-transition: width 0.3s; /* Opera */  
+    -moz-transition: width 0.3s;
+    /* Firefox 4 */
+    -o-transition: width 0.3s;
+    /* Opera */
 }
- /*a,*/
-.text-glow a{   
-    -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+/*a,*/
+ .text-glow a {
+    -webkit-transition: all 0.3s ease-in;
+    /*Safari & Chrome*/
     transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
-    -o-transition: all 0.3s ease-in; /* Opera */
+    -moz-transition: all 0.3s ease-in;
+    /* Firefox 4 */
+    -o-transition: all 0.3s ease-in;
+    /* Opera */
     text-decoration:none;
-    color:rgba(250,250,255,0.8);
+    color:rgba(250, 250, 255, 0.8);
 }
 /*
  * Allow only vertical resizing of textareas.
  */
-
-textarea {
+ textarea {
     resize: vertical;
 }
-
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
-
-.browsehappy {
+ .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
 }
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body{
-  font-family: 'arimo-b', Verdana;
-  position: absolute;
-  top:0;
-  height: 100%;
-  width: 100%; 
-  text-align: center;
+ body {
+    font-family:'arimo-b', Verdana;
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
-.cover{
-  position: fixed;
-  top:0; left:0;
-  height: 100%;
-  width:100%;
-  background: url(../img/weave.png) repeat;
-  opacity:0.5;
-  z-index:-1; 
+.cover {
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background: url(../img/weave.png) repeat;
+    opacity:0.5;
+    z-index:-1;
 }
-
-.cover2{
-  position: fixed;
-  top:0; left:0;
-  height: 100%;
-  width:100%;
-  opacity:0.6; 
-  background: url(../img/c.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-   background-size: cover;
-   z-index:-2;
+.cover2 {
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    opacity:0.6;
+    background: url(../img/c.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index:-2;
 }
-.cover3{
-  position: fixed;
-  top:0; left:0;
-  height: 100%;
-  width:100%;
-  opacity:0.8; 
-  z-index:-1;
-  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+.cover3 {
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    opacity:0.8;
+    z-index:-1;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
 }
-
-footer,
-nav{
-  width:100%;
-  padding: 0;
-  background:rgba(21,21,21,0.9);
+footer, nav {
+    width:100%;
+    padding: 0;
+    background:rgba(21, 21, 21, 0.9);
 }
-nav{
-  margin: 0;
-  height:70px;
-  position: fixed;
-  top:0;
+nav {
+    margin: 0;
+    height:70px;
+    position: fixed;
+    top:0;
 }
-div.fix{
-  position: fixed;
-  top:0;
-  width: 100%;
+div.fix {
+    position: fixed;
+    top:0;
+    width: 100%;
 }
-
-footer{
-  height: 40px;
-  position: fixed;
-  bottom:0;
+footer {
+    height: 40px;
+    position: fixed;
+    bottom:0;
 }
-nav > ul{
-  width:auto;
-  float: right;
-  padding: 0px; margin: 25px 0 0;
+nav > ul {
+    width:auto;
+    float: right;
+    padding: 0px;
+    margin: 25px 0 0;
 }
-
-nav > ul > li{
-  width:100px;
-  display:inline;
-  margin:0 40px 0px;
+nav > ul > li {
+    width:100px;
+    display:inline;
+    margin:0 40px 0px;
 }
-
-h2.logo{
-  position: absolute;
-  top:10px; left:130px;
-  margin:0; padding: 0;
+h2.logo {
+    position: absolute;
+    top:10px;
+    left:130px;
+    margin:0;
+    padding: 0;
 }
-
-img.logoimg{
-  position: absolute;
-  width:100px;
-  top:10px;
-  left:10px;
-  background: rgba(31,31,31,1);
-  border:1px solid white;
+img.logoimg {
+    position: absolute;
+    width:100px;
+    top:10px;
+    left:10px;
+    background: rgba(31, 31, 31, 1);
+    border:1px solid white;
 }
-div.container{
-  width: 100%;
-  height: 100%;
-  margin:0; padding: 100px 0 50px;
+div.container {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 100px 0 50px;
 }
-
-.centerwrap{
-  display: table;
-  margin: 0 auto;
+.centerwrap {
+    display: table;
+    margin: 0 auto;
 }
-
-section.home{
-  text-align: center;
-  width:100%;
-  height: auto;
-  margin: 150px auto;
-  padding-top: 0px;
+section.home {
+    text-align: center;
+    width:100%;
+    height: auto;
+    margin: 150px auto;
+    padding-top: 0px;
 }
-
-
 section.home > form {
-  width:1215px;
-  margin:100px auto 0;
-  padding: 0;
+    width:1215px;
+    margin:100px auto 0;
+    padding: 0;
 }
-
-section.home > form > input{
-  text-align: center;
-  background: rgba(21,21,21,0.8);
-  border:2px solid rgba(5,150,5,0);
-  padding: 0;
-  margin: 5px 0;
-  width:600px;
-  height: 80px;
-      -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+section.home > form > input {
+    text-align: center;
+    background: rgba(21, 21, 21, 0.8);
+    border:2px solid rgba(5, 150, 5, 0);
+    padding: 0;
+    margin: 5px 0;
+    width:600px;
+    height: 80px;
+    -webkit-transition: all 0.3s ease-in;
+    /*Safari & Chrome*/
     transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
-    -o-transition: all 0.3s ease-in; /* Opera */
+    -moz-transition: all 0.3s ease-in;
+    /* Firefox 4 */
+    -o-transition: all 0.3s ease-in;
+    /* Opera */
 }
-
-section.complete_survey > ul > a > li > h5:hover,
-section.user > ul > a > li > h5:hover,
-section.home > form > input:hover{
-  background: rgba(5,150,85,0.8);
-  border:2px solid white;
+section.complete_survey > ul > a > li > h5:hover, section.user > ul > a > li > h5:hover, section.home > form > input:hover {
+    background: rgba(5, 150, 85, 0.8);
+    border:2px solid white;
 }
-
-section.home > form > input.login,
-section.home > form > input.signup{
-  color:white;
-  margin: 0 40px;
-  background: rgba(21,21,21,0.5);
-  border:2px solid white;
-  width: 200px; height: 40px;
-  position: relative;
-  top:70px;
-  left: 0px;
+section.home > form > input.login, section.home > form > input.signup {
+    color:white;
+    margin: 0 40px;
+    background: rgba(21, 21, 21, 0.5);
+    border:2px solid white;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top:70px;
+    left: 0px;
 }
-
-a:hover,
-a:focus,
-a:active,
-a:hover,
-nav > ul > li > a:hover,
-section.home a:hover,
-nav > ul > li > a:focus,
-section.home a:focus,
-nav > ul > li > a:active,
-section.home a:active{
-
+a:hover, a:focus, a:active, a:hover, nav > ul > li > a:hover, section.home a:hover, nav > ul > li > a:focus, section.home a:focus, nav > ul > li > a:active, section.home a:active {
     -webkit-stroke-width: 4.3px;
-    -webkit-stroke-color: rgba(250,250,255,0.8);
-    -webkit-fill-color: rgba(5,150,85,0.8);
-    text-shadow: 1px 0px 15px rgba(5,150,85,0.8);
-    -webkit-transition: width 0.3s; /*Safari & Chrome*/
+    -webkit-stroke-color: rgba(250, 250, 255, 0.8);
+    -webkit-fill-color: rgba(5, 150, 85, 0.8);
+    text-shadow: 1px 0px 15px rgba(5, 150, 85, 0.8);
+    -webkit-transition: width 0.3s;
+    /*Safari & Chrome*/
     transition: width 0.3s;
-    -moz-transition: width 0.3s; /* Firefox 4 */
-    -o-transition: width 0.3s; /* Opera */
-     
+    -moz-transition: width 0.3s;
+    /* Firefox 4 */
+    -o-transition: width 0.3s;
+    /* Opera */
 }
-
-
-a,
-nav > ul > li > a,
-section.home a{   
-    -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+a, nav > ul > li > a, section.home a {
+    -webkit-transition: all 0.3s ease-in;
+    /*Safari & Chrome*/
     transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
-    -o-transition: all 0.3s ease-in; /* Opera */
+    -moz-transition: all 0.3s ease-in;
+    /* Firefox 4 */
+    -o-transition: all 0.3s ease-in;
+    /* Opera */
     text-decoration:none;
 }
-nav > ul > li > a{
- color:rgba(250,250,255,0.8);
+nav > ul > li > a {
+    color:rgba(250, 250, 255, 0.8);
 }
-
-a,
-section.home a{
- color:rgba(35,35,35,0.8); 
+a, section.home a {
+    color:rgba(35, 35, 35, 0.8);
 }
-section.individual_results{
-  background:rgba(35,35,35,0.8);
-  color:rgba(235,235,235,0.8);
-  height:auto;
-  padding:50px;
+section.individual_results {
+    background:rgba(35, 35, 35, 0.8);
+    color:rgba(235, 235, 235, 0.8);
+    height:auto;
+    padding:50px;
 }
-section.individual_results > div > h2{
-  display: inline-block;
-  margin: 0px 20px 0; 
+section.individual_results > div > h2 {
+    display: inline-block;
+    margin: 0px 20px 0;
 }
-section.individual_results h3.golefter{
-  float:left;
+section.individual_results h3.golefter {
+    float:left;
 }
-section.individual_results h3.gorighter{
-  float:right;
+section.individual_results h3.gorighter {
+    float:right;
 }
-section.individual_results > div > h2:nth-child(2){
-  color:rgba(5,150,85,0.8);
+section.individual_results > div > h2:nth-child(2) {
+    color:rgba(5, 150, 85, 0.8);
 }
-section.individual_results > div{
-  padding-bottom: 20px;
+section.individual_results > div {
+    padding-bottom: 20px;
 }
-section.individual_results > ul{
-  width: 800px;
+section.individual_results > ul {
+    width: 800px;
 }
-section.individual_results > ul  > li{
-  margin:0px 0 20px; padding: 0;
-  list-style: none;
+section.individual_results > ul > li {
+    margin:0px 0 20px;
+    padding: 0;
+    list-style: none;
 }
-section.individual_results > ul  > li.other{ 
-  list-style: none;
-  margin:0; padding: 0;
-  float: right;
-  width: 350px;
-  background: rgba(5,150,85,0.7);
-  border: 2px white solid;
+section.individual_results > ul > li.other {
+    list-style: none;
+    margin:0;
+    padding: 0;
+    float: right;
+    width: 350px;
+    background: rgba(5, 150, 85, 0.7);
+    border: 2px white solid;
 }
-section.individual_results > ul  > li.white{
-  background: rgba(221,221,221,1);
-  border: 1px solid rgba(5,130,5,0.5);
-  text-align: center;
-  float: left;
-  width: 350px;
-  color: rgba(21,21,21,0.7);
+section.individual_results > ul > li.white {
+    background: rgba(221, 221, 221, 1);
+    border: 1px solid rgba(5, 130, 5, 0.5);
+    text-align: center;
+    float: left;
+    width: 350px;
+    color: rgba(21, 21, 21, 0.7);
 }
-section.complete_survey > form > div.survey_q  > label{
-  float: left;
+section.complete_survey > form > div.survey_q > label {
+    float: left;
 }
-section.complete_survey > form > div.survey_q  > textarea{
-  float: right;
+section.complete_survey > form > div.survey_q > textarea {
+    float: right;
 }
-section.complete_survey > form > label,
-section.complete_survey > form > div.survey_q > label,
-section.complete_survey > h3,
-section.user > ul > li > h3,
-section.user > ul > li > h2 > a{
- color:rgba(250,250,255,0.8); 
+section.complete_survey > form > label, section.complete_survey > form > div.survey_q > label, section.complete_survey > h3, section.user > ul > li > h3, section.user > ul > li > h2 > a {
+    color:rgba(250, 250, 255, 0.8);
 }
-
-section.complete_survey > form > input:first-child{
-  float:left;
+section.complete_survey > form > input:first-child {
+    float:left;
 }
-
-section.complete_survey > form > input.goright,
-section.complete_survey > form > input:last-child{
-  float:right;
+section.complete_survey > form > input.goright, section.complete_survey > form > input:last-child {
+    float:right;
 }
-section.complete_survey > form > input[type="radio"]{
-  margin:12px 20px;
+section.complete_survey > form > input[type="radio"] {
+    margin:12px 20px;
 }
-section.complete_survey > form > div.survey_q > label{
-  background:rgba(5,150,85,0.6);
-  padding: 10px 20px; 
-  border: 2px white solid;
-  width:40%;
-  color: rgba(54,54,54,0.9);
+section.complete_survey > form > div.survey_q > label {
+    background:rgba(5, 150, 85, 0.6);
+    padding: 10px 20px;
+    border: 2px white solid;
+    width:40%;
+    color: rgba(54, 54, 54, 0.9);
 }
-section.complete_survey{
-  position: relative;
-  top:100px;
-  width:800px;
+section.complete_survey {
+    position: relative;
+    top:100px;
+    width:800px;
 }
-section.complete_survey,
-section.user > ul,
-section.home > div.user_partial,   
-section.user > div.user_partial {
-  background: rgba(34,34,34,0.8);
-  padding: 50px;
+section.complete_survey, section.user > ul, section.home > div.user_partial, section.user > div.user_partial {
+    background: rgba(34, 34, 34, 0.8);
+    padding: 50px;
 }
-
-section.user > div.user_partial > table,
-section.home > div.centerwrap > table,
-section.results_page > table {
-  width:800px;
+section.user > div.user_partial > table, section.home > div.centerwrap > table, section.results_page > table {
+    width:800px;
 }
-hr.two{
-  margin-top: 25px;
+hr.two {
+    margin-top: 25px;
 }
-section.user > h2{
-  color: rgba(245,245,245,0.9);
+section.user > h2 {
+    color: rgba(245, 245, 245, 0.9);
 }
-
-section.user > ul > li > h2:first-child{
-  float: left;
+section.user > ul > li > h2:first-child {
+    float: left;
 }
-section.user > ul > li > h2:last-child{
-  float: right;
+section.user > ul > li > h2:last-child {
+    float: right;
 }
-section.user > ul > li > h2,
-section.user > div.centerwrap > h2,
-section.home > div.centerwrap > h2{
-  color: rgba(5,150,85,0.6);
-  margin: 0 0 40px;
+section.user > ul > li > h2, section.user > div.centerwrap > h2, section.home > div.centerwrap > h2 {
+    color: rgba(5, 150, 85, 0.6);
+    margin: 0 0 40px;
 }
-section.user > div.user_partial > table th:first-child,
-section.results_page > table th:first-child{
-  background: rgba(5,150,85,0.8);
+section.user > div.user_partial > table th:first-child, section.results_page > table th:first-child {
+    background: rgba(5, 150, 85, 0.8);
 }
-
-section.user > div.user_partial > table th,
-section.home > div.centerwrap > table th{
-  border: 1px solid #ccc;
-  padding: 20px;
-  color: rgba(21,21,21,0.8);
-  background: rgba(5,150,85,0.8);
+section.user > div.user_partial > table th, section.home > div.centerwrap > table th {
+    border: 1px solid #ccc;
+    padding: 20px;
+    color: rgba(21, 21, 21, 0.8);
+    background: rgba(5, 150, 85, 0.8);
 }
-section.user > ul > a > li > h5{
-  background: rgba(221,221,221,0.8);
-  padding:20px 40px;
-  border:2px solid white;
-      -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/  
+section.user > ul > a > li > h5 {
+    background: rgba(221, 221, 221, 0.8);
+    padding:20px 40px;
+    border:2px solid white;
+    -webkit-transition: all 0.3s ease-in;
+    /*Safari & Chrome*/
     transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
-    -o-transition: all 0.3s ease-in; /* Opera */
+    -moz-transition: all 0.3s ease-in;
+    /* Firefox 4 */
+    -o-transition: all 0.3s ease-in;
+    /* Opera */
 }
-
-section.user > div.user_partial > table td,
-section.home > div.centerwrap > table td{
-  width:200px;
-  background: rgba(221,221,221,1);
+section.user > div.user_partial > table td, section.home > div.centerwrap > table td {
+    width:200px;
+    background: rgba(221, 221, 221, 1);
 }
-section.user{
-  width:800px;
+section.user {
+    width:800px;
 }
-section.user > ul > li{
-  list-style: none;
+section.user > ul > li {
+    list-style: none;
 }
-
-section.home > form > input.login:hover,
-section.home > form > input.signup:hover{
- background: rgba(21,21,21,0.7); 
- border: 2px solid rgba(5,150,5,0.9); 
+section.home > form > input.login:hover, section.home > form > input.signup:hover {
+    background: rgba(21, 21, 21, 0.7);
+    border: 2px solid rgba(5, 150, 5, 0.9);
 }
-section.home2{
-  display: block;
-  width: 100%;
-  position: relative;
-  top:200px;
+section.home2 {
+    display: block;
+    width: 100%;
+    position: relative;
+    top:200px;
 }
-
-section.home2 > h1.styles{
-  font-family: 'Polsku', sans-serif;
-  font-size: 104px;
-  letter-spacing: 10px;
-  color: rgba(21,21,21,1);
-    text-shadow: 0 0 2px rgba(5,150,85,0.8), 0 0 2px rgba(5,150,85,0.8), 0 0 2px rgba(5,150,85,0.8), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1), 0 0 5px rgba(2,0,12,1);
+section.home2 > h1.styles {
+    font-family:'Polsku', sans-serif;
+    font-size: 104px;
+    letter-spacing: 10px;
+    color: rgba(21, 21, 21, 1);
+    text-shadow: 0 0 2px rgba(5, 150, 85, 0.8), 0 0 2px rgba(5, 150, 85, 0.8), 0 0 2px rgba(5, 150, 85, 0.8), 0 0 5px rgba(2, 0, 12, 1), 0 0 5px rgba(2, 0, 12, 1), 0 0 5px rgba(2, 0, 12, 1), 0 0 5px rgba(2, 0, 12, 1), 0 0 5px rgba(2, 0, 12, 1);
 }
-
-section.complete_survey > form > h3,
-section.create_survey .survey_title{
-  background: rgba(21,21,21,0.7);
-  color: white;
-  padding: 10px;
+section.complete_survey > form > h3, section.create_survey .survey_title {
+    background: rgba(21, 21, 21, 0.7);
+    color: white;
+    padding: 10px;
 }
-
-section.complete_survey > form > div.survey_q > textarea,
-section.complete_survey > form > input,
-section.create_survey input{
-  border: 2px white solid;
+section.complete_survey > form > div.survey_q > textarea, section.complete_survey > form > input, section.create_survey input {
+    border: 2px white solid;
 }
-section.complete_survey > h3{
-  text-align: left;
-  margin: 0 0 40px 0;
+section.complete_survey > h3 {
+    text-align: left;
+    margin: 0 0 40px 0;
 }
-section.complete_survey > form > div.survey_q > textarea{
-  background: rgba(240,240,240,0.9);
-  width:40%;
+section.complete_survey > form > div.survey_q > textarea {
+    background: rgba(240, 240, 240, 0.9);
+    width:40%;
 }
-section.create_survey > form > ul > li > h3{
-  float: left;
-  color: rgba(240,240,240,0.9);
-  padding: 0px 10px;
-  text-transform: uppercase;
+section.create_survey > form > ul > li > h3 {
+    float: left;
+    color: rgba(240, 240, 240, 0.9);
+    padding: 0px 10px;
+    text-transform: uppercase;
 }
-section.create_survey > form > ul > li > input.survey_title{
-  float: right;
-  width:400px;
-  background: rgba(5,150,85,0.8);
-  padding: 10px 20px;
+section.create_survey > form > ul > li > input.survey_title {
+    float: right;
+    width:400px;
+    background: rgba(5, 150, 85, 0.8);
+    padding: 10px 20px;
 }
-
-section.create_survey > form > ul > li > h3,
-section.create_survey > form > ul > li > input.survey_title{
-  display: inline;
+section.create_survey > form > ul > li > h3, section.create_survey > form > ul > li > input.survey_title {
+    display: inline;
 }
-
-section.complete_survey > form > input:last-child,
-section.create_survey .survey_title > input:last-child{
-  padding: 10px 40px; 
-  background:rgba(5,130,85,0.8);
-  color: rgba(240,240,240,0.9);
-  border: 1px solid rgba(240,240,240,0.9);
+section.complete_survey > form > input:last-child, section.create_survey .survey_title > input:last-child {
+    padding: 10px 40px;
+    background:rgba(5, 130, 85, 0.8);
+    color: rgba(240, 240, 240, 0.9);
+    border: 1px solid rgba(240, 240, 240, 0.9);
 }
-
-section.complete_survey > form > div.survey_q > input,
-section.complete_survey > form > input,
-section.create_survey  input.build_survey{
-  background: rgba(221,221,221,1);
-  border: 1px solid rgba(5,130,5,0.5);
-  padding: 10px; 
-  text-align: center;
-  float: right;
+section.complete_survey > form > div.survey_q > input, section.complete_survey > form > input, section.create_survey input.build_survey {
+    background: rgba(221, 221, 221, 1);
+    border: 1px solid rgba(5, 130, 5, 0.5);
+    padding: 10px;
+    text-align: center;
+    float: right;
 }
-section.complete_survey > form > div.survey_q > h1{
-  display: inline;
-  color: white;
+section.complete_survey > form > div.survey_q > h1 {
+    display: inline;
+    color: white;
 }
-ul li.question_white{
-  background: rgba(5,130,85,0.7);
-  border-right:60px rgba(5,130,85,0.7) solid; 
-  margin:10px 0 0 10px;
-  width: 200px;
-  list-style: none;
+ul li.question_white {
+    background: rgba(5, 130, 85, 0.7);
+    border-right:60px rgba(5, 130, 85, 0.7) solid;
+    margin:10px 0 0 10px;
+    width: 200px;
+    list-style: none;
 }
-ul#sortable li.question_white > input{
-  /*width: 300px;*/
+ul li.question_white > input {
+    background:rgba(21, 21, 21, 0.9);
+    border: 1px solid rgba(5, 130, 85, 0.5);
+    height: 40px;
+    width:200px;
+    padding: 3px 10px;
 }
-ul li.question_white > input{
-  background:rgba(21,21,21,0.9);
-  border: 1px solid rgba(5,130,5,0.5);
-  height: 40px;
-  width:200px;
-  padding: 3px 10px;
+ul li.question_white > a#gen_radio {
+    display:none;
+    float: right;
+    margin: 0;
+    width:10%;
+    background:rgba(5, 130, 85, 0.5);
+    border: 1px solid rgba(21, 21, 21, 0.9);
 }
-#sortable{
-  min-height: 300px;
+#sortable {
+    min-height: 300px;
 }
-
-ul#sortable li.question_white{
-  background: rgba(5,130,85,0.7);
-  list-style: none;
-  margin: 0 0 0 -10px;
+ul#sortable li.question_white {
+    background: rgba(5, 130, 85, 0.7);
+    list-style: none;
+    margin: 0 0 0 -10px;
 }
 .container > ul {
-  position: fixed;
-  left:0px;
-  top:34%;
+    position: fixed;
+    left:0px;
+    top:34%;
 }
-section.create_survey li,
-ul.tools li{
-  list-style: none;
+.container li {
+    list-style: none;
 }
-section.create_survey{
-  background:rgba(21,21,21,0.7);
-  min-height: 300px;
-  width: 800px; 
-  padding: 50px 50px 150px;
-  position: relative;
+section.create_survey > section.create_survey li {
+    list-style: none;
 }
-section.create_survey li:first-child,
-section.create_survey li input.build_survey{
-  display: inline;
-  margin:0;
+section.create_survey {
+    background:rgba(21, 21, 21, 0.7);
+    min-height: 300px;
+    width: 800px;
+    padding: 50px 50px 150px;
+    position: relative;
 }
-section.create_survey li input.build_survey{
-  position: absolute;
-  bottom:20px;
-  right:50px;
+section.create_survey li:first-child, section.create_survey li input.build_survey {
+    display: inline;
+    margin:0;
 }
-
-section.results_page{
-  margin: 100px auto 0;
-  text-align: center;
+section.create_survey li input.build_survey {
+    position: absolute;
+    bottom:20px;
+    right:50px;
 }
-
-section.results_page > table th{
-  border: 1px solid #ccc;
-  background: rgba(21,21,21,0.8);
-  color: rgba(221,221,221,0.8);
+section.results_page {
+    margin: 100px auto 0;
+    text-align: center;
 }
-
-section.user > div.user_partial > table td,
-section.home > div.centerwrap > table td,
-section.results_page > table td{
-  border: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+section.results_page > table th {
+    border: 1px solid #ccc;
+    background: rgba(21, 21, 21, 0.8);
+    color: rgba(221, 221, 221, 0.8);
 }
-
-
-section.results_page > table tr td:first-child{
-  background: rgba(21,21,21,0.8);
-  color: rgba(221,221,221,0.8);
+section.user > div.user_partial > table td, section.home > div.centerwrap > table td, section.results_page > table td {
+    border: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
-
-
+section.results_page > table tr td:first-child {
+    background: rgba(21, 21, 21, 0.8);
+    color: rgba(221, 221, 221, 0.8);
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== 
@@ -659,36 +596,30 @@ section.results_page > table tr td:first-child{
 /*
  * Image replacement
  */
-
-.ir {
+ .ir {
     background-color: transparent;
     border: 0;
     overflow: hidden;
     /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
-
 .ir:before {
-    content: "";
+    content:"";
     display: block;
     width: 0;
     height: 150%;
 }
-
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-
-.hidden {
+ .hidden {
     display: none !important;
     visibility: hidden;
 }
-
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-
-.visuallyhidden {
+ .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -698,14 +629,11 @@ section.results_page > table tr td:first-child{
     position: absolute;
     width: 1px;
 }
-
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+ .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -713,15 +641,12 @@ section.results_page > table tr td:first-child{
     position: static;
     width: auto;
 }
-
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-
-.invisible {
+ .invisible {
     visibility: hidden;
 }
-
 /*
  * Clearfix: contain floats
  *
@@ -733,111 +658,82 @@ section.results_page > table tr td:first-child{
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+ .clearfix:before, .clearfix:after {
+    content:" ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
-
 .clearfix:after {
     clear: both;
 }
-
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-
-.clearfix {
+ .clearfix {
     *zoom: 1;
 }
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
+ @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
-
-@media print {
+ @media print {
     * {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        color: #000 !important;
+        /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
-        content: " (" attr(href) ")";
+        content:" (" attr(href)")";
     }
-
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content:" (" attr(title)")";
     }
-
     /*
      * Don't show links for images, or javascript/internal links
      */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content:"";
     }
-
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
-        display: table-header-group; /* h5bp.com/t */
+        display: table-header-group;
+        /* h5bp.com/t */
     }
-
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     @page {
         margin: 0.5cm;
     }
-
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
