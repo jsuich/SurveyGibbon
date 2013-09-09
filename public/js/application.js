@@ -8,21 +8,37 @@ $(document).ready(function() {
         stop: function(ui, event) {
             event.item.children(1).attr('name', "survey[prompts][" + n + "]");
             event.item.children('input.ad', 'input.ad1').attr('placeholder', "Enter Question...")
+            event.item.css('width', '100%');
             event.item.children('input.ad1').attr('placeholder', "Enter Question...")
             event.item.children(1).css('margin', '0');
-            event.item.children('input.ad').css('width', '100%');
-            event.item.children('input.ad1').css('width', '86%');
+            event.item.children('input.ad').css({
+                'width': '99.8%',
+                'background' : 'rgba(251,251,251,1)'
+            });
+            event.item.children('input.ad1').css({
+                'width': '99.8%',
+                'background' : 'rgba(251,251,251,1)'
+                });
             event.item.children('a#gen_radio').css({
                 "display": "inline-block",
                 "width": "10%",
                 "background": "rgba(5, 130, 85, 1)",
                 "border": "1px solid rgba(21, 21, 21, 0.9)"
             });
+            event.item.children('ul.radios').css({
+                "display" : "inline-block",
+                "margin" : "10px",
+                "background" : "rgba(21, 21, 21, 0.5)"
+            });
+            event.item.children('input.one_radio').css({
+               "margin" : "10px",
+               "width" : "40%" 
+            })    
             event.item.css('border', '1px solid rgba(5,130,85,0.7)');
             event.item.css('margin-bottom', '30px');
-            event.item.children(1).css('background', 'rgba(251,251,251,1)');
-            event.item.css('width', '100%');
+
             n++;
+            // if (event.item.children(1))
         }
     });
 
@@ -32,13 +48,13 @@ $(document).ready(function() {
         revert: "invalid",
     });
 
-    $("#draggable_2").draggable({
-        stop: function(ui, event) {
-            event.item.append('<a id="gen_radio" href="#">Add Choice</a>');
-        }
-    });
+
 
     $("ul, li").disableSelection();
+
+    $('#gen_radio').on('click', function(event){
+        $()
+    });
 
     // $('li#remove').click.find('ul.question_white').remove();   
 });

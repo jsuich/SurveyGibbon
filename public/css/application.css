@@ -523,10 +523,11 @@ ul li.question_white {
 }
 ul li.question_white > input {
     background:rgba(21, 21, 21, 0.9);
-    border: 1px solid rgba(5, 130, 85, 0.5);
+    border: 1px inset rgba(5, 130, 85, 0.5);
     height: 40px;
-    width:200px;
-    padding: 3px 10px;
+    text-align: center;
+    /*width:200px;*/
+    padding: 3px 0;
 }
 ul li.question_white > a#gen_radio {
     display:none;
@@ -536,13 +537,26 @@ ul li.question_white > a#gen_radio {
     background:rgba(5, 130, 85, 0.5);
     border: 1px solid rgba(21, 21, 21, 0.9);
 }
+li.question_white > ul.radios {
+    display:none;
+    margin: 5px 0;
+    padding:10px 0;
+    background:rgba(21, 21, 21, 0.9);
+}
+li.question_white > ul.radios > input{
+    margin: 5px 25px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    /*background:rgba(21, 21, 21, 0.9);*/
+}
 #sortable {
     min-height: 300px;
 }
-ul#sortable li.question_white {
+ul#sortable > li.question_white {
     background: rgba(5, 130, 85, 0.7);
     list-style: none;
-    margin: 0 0 0 -10px;
+    margin: 0 ;
 }
 .container > ul {
     position: fixed;
