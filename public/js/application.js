@@ -1,13 +1,19 @@
 $(document).ready(function() {
 
     var n = 1
-
+    var mc = 1
     $("#sortable").sortable({
         revert: true,
         items: "li:not(.donotsortme)",
         stop: function(ui, event) {
-            event.item.children(1).attr('name', "survey[prompts][" + n + "]");
-            event.item.children('input.ad', 'input.ad1').attr('placeholder', "Enter Question...")
+            event.item.children('input.ad').attr('name', "survey[prompts][" + n + "]");
+            event.item.children('input.ad1').attr('name', "radios[prompts][" + n + "]"),
+                $('input.one_radio').each(function(){
+                    $(this).attr('name', "radios[prompts][" + n + "][" + mc + "]");
+                    mc++;
+                });   
+            // event.item.children('input.ad1').children('input.one_radio').attr('name', "radio[prompts][" + r + "][" + mc + "]");         
+            event.item.children('input.ad').attr('placeholder', "Enter Question...")
             event.item.css('width', '100%');
             event.item.children('input.ad1').attr('placeholder', "Enter Question...")
             event.item.children(1).css('margin', '0');
@@ -25,7 +31,7 @@ $(document).ready(function() {
                 "background": "rgba(5, 130, 85, 1)",
                 "border": "1px solid rgba(21, 21, 21, 0.9)"
             });
-            event.item.children('ul.radios').css({
+            event.item.children('input.one_radio').css({
                 "display" : "inline-block",
                 "margin" : "10px",
                 "background" : "rgba(21, 21, 21, 0.5)"

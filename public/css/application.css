@@ -196,9 +196,10 @@ footer, nav {
 }
 nav {
     margin: 0;
-    height:70px;
+    height:45px;
     position: fixed;
     top:0;
+    border-bottom: 15px solid rgba(5, 150, 95, 0.8);
 }
 div.fix {
     position: fixed;
@@ -206,9 +207,10 @@ div.fix {
     width: 100%;
 }
 footer {
-    height: 40px;
+    height: 35px;
     position: fixed;
     bottom:0;
+    border-bottom: 30px solid rgba(5, 150, 95, 0.6);
 }
 nav > ul {
     width:auto;
@@ -223,14 +225,14 @@ nav > ul > li {
 }
 h2.logo {
     position: absolute;
-    top:10px;
-    left:130px;
+    top:15px;
+    left:110px;
     margin:0;
     padding: 0;
 }
 img.logoimg {
     position: absolute;
-    width:100px;
+    width:80px;
     top:10px;
     left:10px;
     background: rgba(31, 31, 31, 1);
@@ -250,8 +252,8 @@ section.home {
     text-align: center;
     width:100%;
     height: auto;
-    margin: 150px auto;
-    padding-top: 0px;
+    position: relative;
+    top:20%;
 }
 section.home > form {
     width:1215px;
@@ -261,7 +263,7 @@ section.home > form {
 section.home > form > input {
     text-align: center;
     background: rgba(21, 21, 21, 0.8);
-    border:2px solid rgba(5, 150, 5, 0);
+    border:2px solid rgba(5, 150, 85, 0);
     padding: 0;
     margin: 5px 0;
     width:600px;
@@ -288,6 +290,11 @@ section.home > form > input.login, section.home > form > input.signup {
     position: relative;
     top:70px;
     left: 0px;
+}
+section.home > form > input.login:hover, section.home > form > input.signup:hover {
+    background: rgba(21, 21, 21, 0.7);
+    border: 2px solid rgba(5, 150, 85, 0.9);
+    box-shadow: 1px 0px 15px rgba(5, 150, 85, 0.8);
 }
 a:hover, a:focus, a:active, a:hover, nav > ul > li > a:hover, section.home a:hover, nav > ul > li > a:focus, section.home a:focus, nav > ul > li > a:active, section.home a:active {
     -webkit-stroke-width: 4.3px;
@@ -359,7 +366,7 @@ section.individual_results > ul > li.other {
 }
 section.individual_results > ul > li.white {
     background: rgba(221, 221, 221, 1);
-    border: 1px solid rgba(5, 130, 5, 0.5);
+    border: 1px solid rgba(5, 130, 85, 0.5);
     text-align: center;
     float: left;
     width: 350px;
@@ -449,10 +456,7 @@ section.user {
 section.user > ul > li {
     list-style: none;
 }
-section.home > form > input.login:hover, section.home > form > input.signup:hover {
-    background: rgba(21, 21, 21, 0.7);
-    border: 2px solid rgba(5, 150, 5, 0.9);
-}
+
 section.home2 {
     display: block;
     width: 100%;
@@ -506,7 +510,7 @@ section.complete_survey > form > input:last-child, section.create_survey .survey
 section.complete_survey > form > div.survey_q > input, section.complete_survey > form > input, section.create_survey input.build_survey {
     background: rgba(221, 221, 221, 1);
     border: 1px solid rgba(5, 130, 5, 0.5);
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
     float: right;
 }
@@ -543,11 +547,13 @@ li.question_white > ul.radios {
     padding:10px 0;
     background:rgba(21, 21, 21, 0.9);
 }
-li.question_white > ul.radios > input{
+li.question_white >  input.one_radio{
     margin: 5px 25px;
     width: 300px;
+    display:none;
     text-align: center;
     border: none;
+    background:rgba(21, 21, 21, 0.9);
     /*background:rgba(21, 21, 21, 0.9);*/
 }
 #sortable {
