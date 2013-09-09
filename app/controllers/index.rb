@@ -83,9 +83,9 @@ end
 
 post '/surveys/:url' do
   session[:user_id]
-  p params[:survey][:prompts]
-  p params[:radios][:prompts]
-  p params[:radios][:prompts]
+  # p params[:survey][:prompts]
+  # p params[:radios][:prompts]
+  # p params[:radios][:prompts]
   # p params[:options][:prompts]
   
   # if params[:survey][:prompts] || params[:radios][:prompts]
