@@ -72,8 +72,8 @@ end
 
 post '/user' do
   if User.find_by_email(params[:user][:email])
-    @user = User.find_by_email(params[:user][:email]) 
-  else 
+    @user ||= User.find_by_email(params[:user][:email]) 
+  else
     @user = User.create(params[:user])
   end
   redirect("/user/#{@user.id}")

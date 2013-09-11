@@ -71,21 +71,7 @@ ul {
     margin: 0 0 1em 0;
     padding: 1em 0 0;
 }
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
- audio, canvas, img, video {
-    vertical-align: middle;
-}
-/*
- * Remove default fieldset styles.
- */
- fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+
 .text-glow {
     font-size:2em;
     color: #FFFFFF;

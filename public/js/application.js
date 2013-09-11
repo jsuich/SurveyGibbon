@@ -8,12 +8,14 @@ $(document).ready(function() {
         stop: function(event, ui) {
             ui.item.children('input.ad').attr('name', "survey[prompts][" + n + "]");
             ui.item.children('input.ad1').attr('name', "radios[prompts][" + n + "]");
-            console.log(ui.item)
-            console.log(ui.item.children(".one_radio"))
-                ui.item.children(".one_radio").each(function(){
-                    $(this).attr('name', "radios[prompts][" + n + "][" + mc + "]");
-                    mc++;
-                });   
+            // console.log(ui.item)
+            // console.log(ui.item.children(".one_radio"))
+
+            ui.item.children(".one_radio").each(function(){
+                $(this).attr('name', "radios[prompts][" + n + "][" + mc + "]");
+                mc++;
+            });
+            
             // ui.item.children('input.ad1').children('input.one_radio').attr('name', "radio[prompts][" + r + "][" + mc + "]");         
             ui.item.children('input.ad').attr('placeholder', "Enter Question...")
             ui.item.css('width', '100%');

@@ -21,6 +21,9 @@ require "sinatra/reloader" if development?
 require 'erb'
 
 require 'bcrypt'
+require 'oauth'
+
+require 'twitter'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -33,3 +36,10 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+Twitter.configure do |config|
+  config.consumer_key = $TWITTER_KEY
+  config.consumer_secret = $TWITTER_SECRET
+  config.oauth_token = $OAUTH_TOKEN
+  config.oauth_token_secret = $OAUTH_TOKEN_SECRET
+end
