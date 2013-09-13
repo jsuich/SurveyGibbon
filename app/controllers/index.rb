@@ -79,25 +79,28 @@ post '/user' do
   redirect("/user/#{@user.id}")
 end
 
+def print_if(params)
+  params ? p params : p "N/A"
+end
 
 
 post '/surveys/:url' do
-  session[:user_id]
-  # p params[:survey][:prompts]
-  # p params[:radios][:prompts]
-  # p params[:radios][:prompts]
-  # p params[:options][:prompts]
+  print_if(session[:user_id])
+  print_if(params[:survey][:prompts])
+  print_if(params[:radios][:prompts])
+  print_if(params[:radios][:prompts])
+  print_if(params[:options][:prompts])
   
-  # if params[:survey][:prompts] || params[:radios][:prompts]
-  #   survey = Survey.create(user_id: session[:user_id], title: params[:survey][:title], url: params[:url])
-  #   params[:survey][:prompts].each do |key,value|  
-  #     Question.create(survey_id: survey.id, prompt: value)
-  #   end
-  #   redirect("/show_survey/#{survey.id}/#{survey.url}")
-  # else
-  #   session[:error] = "Please add questions to your survey!" 
-  #   redirect("/user/#{session[:user_id]}/create_survey")
-  # end
+  if params[:survey][:prompts] || params[:radios][:prompts]
+    survey = Survey.create(user_id: session[:user_id], title: params[:survey][:title], url: params[:url])
+    params[:survey][:prompts].each do |key,value|  
+      Question.create(survey_id: survey.id, prompt: value)
+    end
+    redirect("/show_survey/#{survey.id}/#{survey.url}")
+  else
+    session[:error] = "Please add questions to your survey!" 
+    redirect("/user/#{session[:user_id]}/create_survey")
+  end
 end
 
 

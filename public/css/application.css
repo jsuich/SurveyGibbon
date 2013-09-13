@@ -1,15 +1,4 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
- html, button, input, select, textarea {
+html, button, input, select, textarea {
     color: #222;
 }
 @font-face {
@@ -254,6 +243,7 @@ section.home > form > input {
     margin: 5px 0;
     width:600px;
     height: 80px;
+    color: white;
     -webkit-transition: all 0.3s ease-in;
     /*Safari & Chrome*/
     transition: all 0.3s ease-in;
@@ -527,6 +517,13 @@ ul li.question_white > a#gen_radio {
     background:rgba(5, 130, 85, 0.5);
     border: 1px solid rgba(21, 21, 21, 0.9);
 }
+
+ul li.question_white > a#gen_radio2 {
+    "display": inline-block;
+    "width": 10%;
+    "background": rgba(5, 130, 85, 1);
+    "border": 1px solid rgba(21, 21, 21, 0.9);
+}
 li.question_white > ul.radios {
     display:none;
     margin: 5px 0;
@@ -540,6 +537,7 @@ li.question_white >  input.one_radio{
     text-align: center;
     border: none;
     background:rgba(21, 21, 21, 0.9);
+    color: white;
     /*background:rgba(21, 21, 21, 0.9);*/
 }
 #sortable {
