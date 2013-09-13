@@ -1,4 +1,5 @@
 class CreateTables < ActiveRecord::Migration
+
   def change
   	create_table :users do |t|
         t.string :email
@@ -28,15 +29,22 @@ class CreateTables < ActiveRecord::Migration
 
     create_table :questions do |t|
     	t.integer :survey_id
-    	t.string :prompt
+    	t.string :question_text
+    	t.timestamps
+    end
+
+    create_table :options do |t|
+    	t.integer :question_id
+    	t.string :option_text
+        t.integer :option_num
     	t.timestamps
     end
 
     create_table :answers do |t|
-    	t.integer :participation_id
-    	t.integer :question_id
-    	t.string :response
-    	t.timestamps
+        t.integer :participation_id
+        t.integer :question_id
+        t.string :response
+        t.timestamps
     end
 
   end

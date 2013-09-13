@@ -35,7 +35,7 @@ end
 
 get '/show_survey/:survey_id/:url' do
   @user = User.find_by_id(session[:user_id])
-  @survey = Survey.find(params[:survey_id])
+  @survey = Survey.find_by_id(params[:survey_id])
   @new_arr = @survey.questions
   
   erb :show_survey
@@ -80,27 +80,50 @@ post '/user' do
 end
 
 def print_if(params)
-  params ? p params : p "N/A"
+  p params if params != nil
 end
 
 
 post '/surveys/:url' do
-  print_if(session[:user_id])
-  print_if(params[:survey][:prompts])
-  print_if(params[:radios][:prompts])
-  print_if(params[:radios][:prompts])
-  print_if(params[:options][:prompts])
+  # print_if(session[:user_id])
+  # print_if(params[:survey][:prompts])
+  # print_if(params[:radios][:prompts])
+  # print_if(params[:radios][:prompts])
+  # print_if(params[:options][:prompts])
+  # p params[:radios]
+  # p "x"*100
+  # # p params[:radios][:prompts]
+  # p "x"*200
+  # p params[:survey]
+  # p "x"*200
+  # p params[:survey][:prompts]
+  # p "x"*200
+  p params
+  if params[:prompts]
+
+    survey = Survey.create(user_id: session[:user_id], title: params[:title], url: params[:url])
+
+    for i in 1..25 #do => Iterate over up to 25 questions
+      if params[:prompts][":#{i}"]
+        q = Question.create(survey_id: survey.id, question_text: params[:prompts][":#{i}"])
   
-  if params[:survey][:prompts] || params[:radios][:prompts]
-    survey = Survey.create(user_id: session[:user_id], title: params[:survey][:title], url: params[:url])
-    params[:survey][:prompts].each do |key,value|  
-      Question.create(survey_id: survey.id, prompt: value)
+        for mc in 1..6 #do => Iterate over up to 6 MC options per ?
+          if params[:prompts][":#{i}"][":#{mc}"]
+              
+              Option.create(question_id: q.id, option_text: params[:prompts][":#{i}"][":#{mc}"], option_num: mc)
+          end
+        end
+
+      end
     end
+
     redirect("/show_survey/#{survey.id}/#{survey.url}")
   else
+
     session[:error] = "Please add questions to your survey!" 
     redirect("/user/#{session[:user_id]}/create_survey")
   end
+
 end
 
 

@@ -6,10 +6,11 @@ $(document).ready(function() {
         revert: true,
         items: "li:not(.donotsortme)",
         stop: function(event, ui) {
-            ui.item.children('input.ad').attr('name', "survey[prompts][" + n + "]");
+            ui.item.children('input.ad').attr('name', "prompts[:" + n + "]");
+            // ui.item.children('input.ad1').attr('name', "prompts[" + n + "]");
 
             ui.item.children(".one_radio").each(function(){
-                $(this).attr('name', "radios[prompts][" + n + "][" + mc + "]");
+                $(this).attr('name', "prompts[:" +  n + "][:" + mc + "]");
                 mc++;
             });
             
@@ -29,7 +30,7 @@ $(document).ready(function() {
                 });
             ui.item.children('a#gen_radio').attr('id', 'gen_radio2');
             //refactored css hard change to id flip//
-            
+
             ui.item.children('input.one_radio').css({
                 "display" : "inline-block",
                 "margin" : "10px",
@@ -59,6 +60,20 @@ $(document).ready(function() {
     $('#gen_radio').on('click', function(ui){
         $()
     });
+    
+    // $('#createSurvey').on('submit', function(event){
+    //     event.preventDefault();
+    //     $.ajax() {
+    //         $.ajax({
+    //             url: "/surveys/"+params[:url],
+    //             context: document.body
+    //             }).done(function() {
+                  
+    //             });
+    //     }
+    // });
+
+
 
     // $('li#remove').click.find('ul.question_white').remove();   
 });

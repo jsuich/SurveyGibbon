@@ -1,10 +1,10 @@
 
 <section class="create_survey centerwrap">
   <h1><%= @error if @error %></h1>
-<form action='/surveys/<%= @url%>' method="POST">
+<form id='createSurvey' action='/surveys/<%= @url%>' method="POST">
   <ul id="sortable">
     <hr>
-    <li class="donotsortme"><h3><%= @user.email %></h3><input placeholder="Survey Title" class="survey_title" type="text" name="survey[title]"></li>
+    <li class="donotsortme"><h3><%= @user.email %></h3><input placeholder="Survey Title" class="survey_title" type="text" name="title"></li>
     <div class="clearfix"></div>
     <hr>
     <li><input type="submit" class="build_survey" value="Build Survey"></li>
@@ -19,7 +19,7 @@
   </li>
 
   <li class="question_white" id="draggable_2">
-    <input class="ad1 radioFields" placeholder="Add Multiple Choice ?" type="text" name="">
+    <input class="ad1 radioFields" placeholder="Enter Question..." type="text" name="">
     
       <input class="one_radio radioFields" placeholder="MC Option.." type="text" name="alpha">
       <input class="one_radio radioFields" placeholder="MC Option.." type="text" name="alpha">
