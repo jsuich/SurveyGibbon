@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     var n = 1
-    var mc = 1
     $("#sortable").sortable({
         revert: true,
         items: "li:not(.donotsortme)",
@@ -9,6 +8,7 @@ $(document).ready(function() {
             ui.item.children('input.ad').attr('name', "prompts[:" + n + "]");
             // ui.item.children('input.ad1').attr('name', "prompts[" + n + "]");
 
+            var mc = 1
             ui.item.children(".one_radio").each(function(){
                 $(this).attr('name', "prompts[:" +  n + "][:" + mc + "]");
                 mc++;
